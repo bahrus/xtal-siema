@@ -3,19 +3,16 @@
     function initXtalSiema(polymerMixin) {
         if (customElements.get('xtal-siema'))
             return;
-        class XtalSiema extends polymerMixin(HTMLElement) {
+        class XtalSiema extends Polymer.Element {
             static get is() { return 'xtal-siema'; }
             static get properties() {
                 return {};
             }
-            static get template() {
-                return `
-
-<div id="siennaContainer">
-<slot></slot>
-</div>
-                `;
-            }
+            //             static get template(){
+            //                 return `
+            // <slot id="siennaContainer"></slot>
+            //                 `
+            //             }
             ready() {
                 super.ready();
                 if (typeof Siema === 'undefined') {
@@ -23,8 +20,11 @@
                     scriptTag.innerText = XtalSiema.SiemaScript;
                     document.head.appendChild(scriptTag);
                 }
+                this.style.display = 'block';
+                // const container = this.$.siennaContainer;
+                // console.log(container);
                 const siema = new Siema({
-                    selector: this.$.siennaContainer,
+                    selector: this,
                 });
             }
         }
@@ -36,7 +36,7 @@
     }
     function WaitForPolymer() {
         cs = document.currentScript;
-        if ((typeof Polymer !== 'function') || (typeof Polymer.ElementMixin !== 'function')) {
+        if ((typeof Polymer !== 'function') || (typeof Polymer.Element !== 'function')) {
             setTimeout(WaitForPolymer, 100);
             return;
         }
