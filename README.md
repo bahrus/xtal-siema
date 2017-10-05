@@ -9,6 +9,12 @@
 <custom-element-demo>
   <template>
     <link rel="import" href="xtal-siema.html">
+    <xtal-siema style="height: 200px">
+        <div>Hi, I'm slide 1</div>
+        <div>Hi, I'm slide 2</div>
+        <div>Hi, I'm slide 3</div>
+        <div>Hi, I'm slide 4</div>
+    </xtal-siema>
   </template>
 </custom-element-demo>
 ```
