@@ -3,6 +3,13 @@
     function initXtalSiema(polymerMixin) {
         if (customElements.get('xtal-siema'))
             return;
+        /**
+         * <xtal-siema></xtal-siema> is a Polymer-based wrapper around the Siema caousel api
+         * (https://pawelgrzybek.com/siema/ ).
+         * @customElement
+         * @polymer
+         * @demo demo/index.html
+         */
         class XtalSiema extends Polymer.Element {
             static get is() { return 'xtal-siema'; }
             static get properties() {

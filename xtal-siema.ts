@@ -8,7 +8,7 @@ declare var Siema;
     function initXtalSiema(polymerMixin : any){
         if(customElements.get('xtal-siema')) return;
         /**
-         * <xtal-siema></xtal-siema> is a Polymer-based wrapper around the Siema api 
+         * <xtal-siema></xtal-siema> is a Polymer-based wrapper around the Siema caousel api 
          * (https://pawelgrzybek.com/siema/ ).
          * @customElement
          * @polymer

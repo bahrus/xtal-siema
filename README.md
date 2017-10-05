@@ -2,7 +2,7 @@
 
 # \<xtal-siema\>
 
-
+\<xtal-siema\> is a Polymer-based wrapper around the [Siema carousel api](https://pawelgrzybek.com/siema/) 
 
 ## Install the Polymer-CLI
 
