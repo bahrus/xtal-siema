@@ -6,6 +6,7 @@
         /**
          * <xtal-siema></xtal-siema> is a Polymer-based wrapper around the Siema caousel api
          * (https://pawelgrzybek.com/siema/ ).
+         *
          * @customElement
          * @polymer
          * @demo demo/index.html
