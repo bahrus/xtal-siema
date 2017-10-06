@@ -11,16 +11,72 @@
          * @polymer
          * @demo demo/index.html
          */
-        class XtalSiema extends Polymer.Element {
+        class XtalSiema extends polymerMixin(HTMLElement) {
+            get SiemaInstance() {
+                return this._siemaInstnce;
+            }
             static get is() { return 'xtal-siema'; }
             static get properties() {
-                return {};
+                return {
+                    /**
+                     * Slide transition duration in milliseconds
+                     */
+                    duration: {
+                        type: Number,
+                        value: 200,
+                    },
+                    /**
+                     * It is like a CSS transition-timing-function — describes acceleration curve
+                     */
+                    easing: {
+                        type: String,
+                        value: 'ease-out'
+                    },
+                    /**
+                     * The number of slides to be shown. It accepts a number  or an object
+                     * for complex responsive layouts.
+                     */
+                    perPage: {
+                        type: Object,
+                        value: 1
+                    },
+                    /**
+                     * Index (zero-based) of the starting slide
+                     */
+                    startIndex: {
+                        type: Number,
+                        value: 0,
+                    },
+                    /**
+                     * Use dragging and touch swiping
+                     */
+                    draggable: {
+                        type: Boolean,
+                        value: true,
+                    },
+                    /**
+                     * Allow dragging to move multiple slides.
+                     */
+                    multipleDrag: {
+                        type: Boolean,
+                        value: true,
+                    },
+                    /**
+                     * Touch and mouse dragging threshold (in px)
+                     */
+                    threshold: {
+                        type: Number,
+                        value: 20
+                    },
+                    /**
+                     * Loop the slides around
+                     */
+                    loop: {
+                        type: Boolean,
+                        value: false
+                    }
+                };
             }
-            //             static get template(){
-            //                 return `
-            // <slot id="siennaContainer"></slot>
-            //                 `
-            //             }
             ready() {
                 super.ready();
                 if (typeof Siema === 'undefined') {
@@ -31,8 +87,16 @@
                 this.style.display = 'block';
                 // const container = this.$.siennaContainer;
                 // console.log(container);
-                const siema = new Siema({
+                this._siemaInstnce = new Siema({
                     selector: this,
+                    draggable: this.draggable,
+                    duration: this.duration,
+                    easing: this.easing,
+                    loop: this.loop,
+                    multipleDrag: this.multipleDrag,
+                    perPage: this.perPage,
+                    startIndex: this.startIndex,
+                    threshold: this.threshold
                 });
             }
         }
@@ -44,7 +108,7 @@
     }
     function WaitForPolymer() {
         cs = document.currentScript;
-        if ((typeof Polymer !== 'function') || (typeof Polymer.Element !== 'function')) {
+        if ((typeof Polymer !== 'function') || (typeof Polymer.ElementMixin !== 'function')) {
             setTimeout(WaitForPolymer, 100);
             return;
         }
