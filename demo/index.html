@@ -1,42 +1,90 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>xtal-siema demo</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <title>xtal-siema demo</title>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <script async src="../xtal-siema.js"></script>
-    <!-- <link rel="import" href="../xtal-siema.html"> -->
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles">
-      </style>
-    </custom-style>
-  </head>
-  <body>
-    <div class="vertical-section-container centered">
-      <h3>Basic xtal-siema demo - drag left / right to see other slides.</h3>
-      <demo-snippet>
-        <template>
-          <xtal-siema style="height: 200px">
-            <div>Awesome Web Component Libraries not found on WebComponents.org (until now)</div>
-            <div><a href="https://onsen.io/" target="_blank">Onsen UI</a></div>
-            <div><a href="https://patternfly-webcomponents.github.io/components.html" target="_blank">Red Hat's PatternFly Components</a></div>
-            <div><a href="http://blog.htmltreegrid.com/post/Best-WebComponents-DataGrid-DataTable.aspx" target="_blank">HTML TreeGrid</a></div>
-            <div><a href="https://blogs.oracle.com/developers/announcing-oracle-jet-40-and-web-components" target="_blank">Oracle Jet</a></div>
-            <div><a href="https://github.com/skatejs/sk-router" target="_blank">SkateJS Router</a></div>
-            <div><a href="https://www.predix-ui.com/#/home" target="_blank">Predix Web Component Library</a></div>
-            <div><a href="https://www.ampproject.org/docs/reference/components" target="_blank">AMP Web Components</a></div>
-            <div><a href="https://github.com/x-tag" target="_blank">X-Tag web components</a></div>
-            <div><a href="https://elix.org/" target="_blank">Elix</a></div>
-            <div><a href="https://medium.com/@mikeal/ive-seen-the-future-it-s-full-of-html-2577246f2210" target="_blank">Mikeal's innovative web components</a></div>
-          </xtal-siema>
-        </template>
-      </demo-snippet>
-    </div>
-  </body>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <script async src="../xtal-siema.js"></script>
+  <!-- <link rel="import" href="../xtal-siema.html"> -->
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+
+    </style>
+  </custom-style>
+</head>
+
+<body>
+  <div class="vertical-section-container centered">
+    <h3>Basic xtal-siema demo - drag left / right to see other slides.</h3>
+    <demo-snippet>
+      <template>
+        <xtal-siema style="height: 300px">
+          <div>Awesome Web Component Libraries not found on WebComponents.org (until now)</div>
+          <div>
+            <div id="preview">
+
+              <div class="left" id="thumbnail">
+                <img width="100" data-src="[https://onsen.io/images/logo/onsen_with_text.png]" src="https://onsen.io/images/logo/onsen_with_text.png">
+              </div>
+
+              <div class="left" id="content">
+
+                <span class="title">Onsen UI 2: Beautiful HTML5 Hybrid Mobile App Framework and Tools - Onsen UI</span>
+                <span class="description">Make beautiful hybrid mobile apps using HTML5, CSS and JavaScript. Works with or without any framework including React, Meteor, Vue, AngularJS 1 &amp; Angular 2+. iOS and Android.</span>
+                <span class="url"><a href="https://onsen.io/">onsen.io/</a></span>
+
+              </div>
+
+              <div id="toolbar" class="clearfix"><button id="changeimg">&gt;</button></div>
+            </div>
+          </div>
+          <div>
+            <div id="html">
+
+              
+
+
+
+              <div id="preview2">
+
+                <div class="left" id="thumbnail2">
+                  <img width="100" data-src="[https://www.ampproject.org/static/img/logo-og-image.jpg]" src="https://www.ampproject.org/static/img/logo-og-image.jpg">
+                </div>
+
+                <div class="left" id="content2">
+
+                  <span class="title">Accelerated Mobile Pages Project – AMP</span>
+                  <span class="description">The Accelerated Mobile Pages (AMP) Project is an open source initiative that makes it easy for publishers to create mobile-friendly content once and have it load instantly everywhere. – AMP</span>
+                  <span class="url"><a href="https://www.ampproject.org">www.ampproject.org</a></span>
+
+                </div>
+
+                <div id="toolbar2" class="clearfix"><button id="changeimg2">&gt;</button></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div><a href="https://patternfly-webcomponents.github.io/components.html" target="_blank">Red Hat's PatternFly Components</a></div>
+          <div><a href="http://blog.htmltreegrid.com/post/Best-WebComponents-DataGrid-DataTable.aspx" target="_blank">HTML TreeGrid</a></div>
+          <div><a href="https://blogs.oracle.com/developers/announcing-oracle-jet-40-and-web-components" target="_blank">Oracle Jet</a></div>
+          <div><a href="https://github.com/skatejs/sk-router" target="_blank">SkateJS Router</a></div>
+          <div><a href="https://www.predix-ui.com/#/home" target="_blank">Predix Web Component Library</a></div>
+
+          <div><a href="https://github.com/x-tag" target="_blank">X-Tag web components</a></div>
+          <div><a href="https://elix.org/" target="_blank">Elix</a></div>
+          <div><a href="https://medium.com/@mikeal/ive-seen-the-future-it-s-full-of-html-2577246f2210" target="_blank">Mikeal's innovative web components</a></div>
+        </xtal-siema>
+      </template>
+    </demo-snippet>
+  </div>
+</body>
+
 </html>
