@@ -14,7 +14,22 @@
     <script async src="../xtal-link-preview.js"></script>
     <xtal-siema style="height: 200px">
           <div>Awesome Web Component Libraries not found on WebComponents.org (until now)</div>
-          <xtal-link-preview style="height:200px" href="https://onsen.io"></xtal-link-preview>
+                   <div id="onsen">
+ 
+             <div class="left" id="thumbnail">
+               <img width="100" data-src="[https://onsen.io/images/logo/onsen_with_text.png]" src="https://onsen.io/images/logo/onsen_with_text.png">
+             </div>
+ 
+             <div class="left" id="content">
+ 
+               <span class="title">Onsen UI 2: Beautiful HTML5 Hybrid Mobile App Framework and Tools - Onsen UI</span>
+               <span class="description">Make beautiful hybrid mobile apps using HTML5, CSS and JavaScript. Works with or without any framework including React, Meteor, Vue, AngularJS 1 &amp; Angular 2+. iOS and Android.</span>
+               <span class="url"><a href="https://onsen.io/">onsen.io/</a></span>
+ 
+             </div>
+ 
+             <div id="toolbar" class="clearfix"><button id="changeimg">&gt;</button></div>
+           </div>
           <div id="oracleJet">
 
             <div class="left" id="thumbnail7">
