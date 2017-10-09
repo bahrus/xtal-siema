@@ -124,7 +124,6 @@ declare var Siema;
     function WaitForPolymer()
     {
         cs = document.currentScript;
-        debugger;
         if ((typeof Polymer !== 'function') || (typeof Polymer.ElementMixin !== 'function')) {
            setTimeout( WaitForPolymer, 100);
            return;
