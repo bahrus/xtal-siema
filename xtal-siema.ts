@@ -24,6 +24,7 @@ declare var Siema;
          */
         class XtalSiema extends polymerMixin(HTMLElement) implements IXtalSiemaProperties{
             _siemaInstnce;
+            _isReady;
             public get SiemaInstance(){
                 return this._siemaInstnce;
             }
@@ -38,13 +39,17 @@ declare var Siema;
                     duration:{
                         type: Number,
                         value: 200,
+                        reflectToAttribute: true,
+                        observer: 'connectToSiemma',
                     },
                     /**
                      * It is like a CSS transition-timing-function — describes acceleration curve
                      */
                     easing:{
                         type: String,
-                        value: 'ease-out'
+                        value: 'ease-out',
+                        reflectToAttribute: true,
+                        observer: 'connectToSiemma',
                     },
                     /**
                      * The number of slides to be shown. It accepts a number  or an object 
@@ -52,7 +57,9 @@ declare var Siema;
                      */
                     perPage:{
                         type:Object,
-                        value: 1
+                        value: 1,
+                        reflectToAttribute: true,
+                        observer: 'connectToSiemma',
                     },
                     /**
                      * Index (zero-based) of the starting slide
@@ -60,6 +67,8 @@ declare var Siema;
                     startIndex:{
                         type: Number,
                         value: 0,
+                        reflectToAttribute: true,
+                        observer: 'connectToSiemma',
                     },
                     /**
                      * Use dragging and touch swiping
@@ -67,6 +76,8 @@ declare var Siema;
                     draggable:{
                         type: Boolean,
                         value: true,
+                        reflectToAttribute: true,
+                        observer: 'connectToSiemma',
                     },
                     /**
                      * Allow dragging to move multiple slides.
@@ -74,20 +85,26 @@ declare var Siema;
                     multipleDrag:{
                         type: Boolean,
                         value: true,
+                        reflectToAttribute: true,
+                        observer: 'connectToSiemma',
                     },
                     /**
                      * Touch and mouse dragging threshold (in px)
                      */
                     threshold:{
                         type: Number,
-                        value: 20
+                        value: 20,
+                        reflectToAttribute: true,
+                        observer: 'connectToSiemma',
                     },
                     /**
                      * Loop the slides around
                      */
                     loop:{
                         type: Boolean,
-                        value: false
+                        value: false,
+                        reflectToAttribute: true,
+                        observer: 'connectToSiemma',
                     }
                 }
             }
@@ -96,16 +113,8 @@ declare var Siema;
 
             `
             
-            ready(){
-                super.ready();
-                if(typeof Siema === 'undefined'){
-                    const scriptTag = document.createElement("script");
-                    scriptTag.innerText = XtalSiema.SiemaScript;
-                    document.head.appendChild(scriptTag);
-                }
-                this.style.display = 'block';
-                // const container = this.$.siennaContainer;
-                // console.log(container);
+            connectToSiemma(){
+                if(!this._isReady) return;
                 this._siemaInstnce = new Siema({
                     selector: this,
                     draggable: this.draggable,
@@ -117,6 +126,19 @@ declare var Siema;
                     startIndex: this.startIndex,
                     threshold: this.threshold
                 } as IXtalSiemaProperties);
+            }
+            ready(){
+                super.ready();
+                if(typeof Siema === 'undefined'){
+                    const scriptTag = document.createElement("script");
+                    scriptTag.innerText = XtalSiema.SiemaScript;
+                    document.head.appendChild(scriptTag);
+                }
+                this.style.display = 'block';
+                this._isReady = true;
+                // const container = this.$.siennaContainer;
+                // console.log(container);
+
             }
         }
         customElements.define(XtalSiema.is, XtalSiema);
