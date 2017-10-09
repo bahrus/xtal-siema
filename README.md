@@ -16,7 +16,7 @@
       }
     </style>
     <link rel="import" href="xtal-siema.html">
-    <script async src="http://rawgit.com/bahrus/xtal-link-preview/master/xtal-link-preview.js"></script>
+    <script async src="https://rawgit.com/bahrus/xtal-link-preview/master/xtal-link-preview.js"></script>
     <xtal-siema style="height: 200px">
           <div>Awesome Web Component Libraries not found on WebComponents.org (until now)</div>
                    <div id="onsen">
