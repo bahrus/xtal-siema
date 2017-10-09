@@ -10,8 +10,13 @@
 ```
 <custom-element-demo>
   <template>
+    <style>
+      xtal-link-preview {
+        height:200px
+      }
+    </style>
     <link rel="import" href="xtal-siema.html">
-    <script async src="../xtal-link-preview.js"></script>
+    <script async src="http://rawgit.com/bahrus/xtal-link-preview/master/xtal-link-preview.js"></script>
     <xtal-siema style="height: 200px">
           <div>Awesome Web Component Libraries not found on WebComponents.org (until now)</div>
                    <div id="onsen">
@@ -232,6 +237,7 @@
 
             <div id="toolbar12" class="clearfix"><button id="changeimg12">&gt;</button></div>
           </div>
+          <xtal-link-preview href="https://onsen.io"></xtal-link-preview>
     </xtal-siema>
   </template>
 </custom-element-demo>
