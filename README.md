@@ -11,7 +11,7 @@
 <custom-element-demo>
   <template>
     <link rel="import" href="xtal-siema.html">
-    <link rel="import" href="../xtal-link-preview.html">
+    <script async src="../xtal-link-preview.js"></script>
     <xtal-siema style="height: 200px">
           <div>Awesome Web Component Libraries not found on WebComponents.org (until now)</div>
           <xtal-link-preview style="height:200px" href="https://onsen.io"></xtal-link-preview>
