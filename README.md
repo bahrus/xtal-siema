@@ -17,7 +17,9 @@
     </style>
     <link rel="import" href="xtal-siema.html">
     <script async src="https://rawgit.com/bahrus/xtal-link-preview/master/xtal-link-preview.js"></script>
-    <xtal-siema style="height: 200px">
+    <xtal-siema 
+          duration="200" easing="ease-out" per-page="1" start-index="0" draggable multiple-drag threshold="20"
+          style="height: 200px">
           <div>Awesome Web Component Libraries not found on WebComponents.org (until now)</div>
           <xtal-link-preview href="https://onsen.io"></xtal-link-preview>
           <xtal-link-preview href="https://blogs.oracle.com/developers/announcing-oracle-jet-40-and-web-components"></xtal-link-preview>

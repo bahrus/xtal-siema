@@ -136,6 +136,7 @@ declare var Siema;
                 }
                 this.style.display = 'block';
                 this._isReady = true;
+                this.connectToSiemma();
                 // const container = this.$.siennaContainer;
                 // console.log(container);
 
