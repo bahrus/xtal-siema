@@ -6,7 +6,12 @@ export interface IXtalSiemaProperties{
     draggable: boolean | polymer.PropObjectType,
     multipleDrag: boolean | polymer.PropObjectType,
     threshold: number | polymer.PropObjectType,
-    loop: boolean | polymer.PropObjectType
+    loop: boolean | polymer.PropObjectType,
+    
+}
+
+export interface IExtendedSiemaProperties extends IXtalSiemaProperties{
+    selectedPageNo: number | polymer.PropObjectType
 }
 
 declare var Siema;
@@ -22,7 +27,7 @@ declare var Siema;
          * @polymer
          * @demo demo/index.html
          */
-        class XtalSiema extends polymerMixin(HTMLElement) implements IXtalSiemaProperties{
+        class XtalSiema extends polymerMixin(HTMLElement) implements IExtendedSiemaProperties{
             _siemaInstnce;
             _isReady;
             public get SiemaInstance(){
@@ -30,8 +35,8 @@ declare var Siema;
             }
             static get is(){return 'xtal-siema';}
             duration:number;easing: string;perPage:number;startIndex:number;draggable:boolean;
-            multipleDrag:boolean;threshold:number;loop: boolean;
-            static get properties() : IXtalSiemaProperties{
+            multipleDrag:boolean;threshold:number;loop: boolean;selectedPageNo:number;
+            static get properties() : IExtendedSiemaProperties{
                 return{
                     /**
                      * Slide transition duration in milliseconds
@@ -105,7 +110,14 @@ declare var Siema;
                         value: false,
                         reflectToAttribute: true,
                         observer: 'connectToSiemma',
+                    },
+                    selectedPageNo:{
+                        type: Number,
+                        reflectToAttribute: true,
+                        notify: true,
+                        readOnly:true,
                     }
+
                 }
             }
             static SiemaScript = `
@@ -115,6 +127,7 @@ declare var Siema;
             
             connectToSiemma(){
                 if(!this._isReady) return;
+                const _this = this;
                 this._siemaInstnce = new Siema({
                     selector: this,
                     draggable: this.draggable,
@@ -124,8 +137,14 @@ declare var Siema;
                     multipleDrag: this.multipleDrag,
                     perPage: this.perPage,
                     startIndex: this.startIndex,
-                    threshold: this.threshold
+                    threshold: this.threshold,
+                    onChange: function(){
+                        _this.handleChange();
+                    }
                 } as IXtalSiemaProperties);
+            }
+            handleChange(){
+                this['_setSelectedPageNo'](this._siemaInstnce.currentSlide);
             }
             ready(){
                 super.ready();
@@ -136,7 +155,9 @@ declare var Siema;
                 }
                 this.style.display = 'block';
                 this._isReady = true;
+                this['_setSelectedPageNo'](0);
                 this.connectToSiemma();
+
                 // const container = this.$.siennaContainer;
                 // console.log(container);
 

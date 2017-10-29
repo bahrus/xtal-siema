@@ -90,12 +90,19 @@
                         value: false,
                         reflectToAttribute: true,
                         observer: 'connectToSiemma',
+                    },
+                    selectedPageNo: {
+                        type: Number,
+                        reflectToAttribute: true,
+                        notify: true,
+                        readOnly: true,
                     }
                 };
             }
             connectToSiemma() {
                 if (!this._isReady)
                     return;
+                const _this = this;
                 this._siemaInstnce = new Siema({
                     selector: this,
                     draggable: this.draggable,
@@ -105,8 +112,14 @@
                     multipleDrag: this.multipleDrag,
                     perPage: this.perPage,
                     startIndex: this.startIndex,
-                    threshold: this.threshold
+                    threshold: this.threshold,
+                    onChange: function () {
+                        _this.handleChange();
+                    }
                 });
+            }
+            handleChange() {
+                this['_setSelectedPageNo'](this._siemaInstnce.currentSlide);
             }
             ready() {
                 super.ready();
@@ -117,6 +130,7 @@
                 }
                 this.style.display = 'block';
                 this._isReady = true;
+                this['_setSelectedPageNo'](0);
                 this.connectToSiemma();
                 // const container = this.$.siennaContainer;
                 // console.log(container);
