@@ -11,7 +11,8 @@ export interface IXtalSiemaProperties{
 }
 
 export interface IExtendedSiemaProperties extends IXtalSiemaProperties{
-    selectedPageNo: number | polymer.PropObjectType
+    selected: number | polymer.PropObjectType,
+    attrForSelected:  string | polymer.PropObjectType,
 }
 
 declare var Siema;
@@ -28,14 +29,14 @@ declare var Siema;
          * @demo demo/index.html
          */
         class XtalSiema extends polymerMixin(HTMLElement) implements IExtendedSiemaProperties{
-            _siemaInstnce;
+            _siemaInstance;
             _isReady;
             public get SiemaInstance(){
-                return this._siemaInstnce;
+                return this._siemaInstance;
             }
             static get is(){return 'xtal-siema';}
             duration:number;easing: string;perPage:number;startIndex:number;draggable:boolean;
-            multipleDrag:boolean;threshold:number;loop: boolean;selectedPageNo:number;
+            multipleDrag:boolean;threshold:number;loop: boolean;selected:number;attrForSelected: string;
             static get properties() : IExtendedSiemaProperties{
                 return{
                     /**
@@ -111,11 +112,17 @@ declare var Siema;
                         reflectToAttribute: true,
                         observer: 'connectToSiemma',
                     },
-                    selectedPageNo:{
+                    selected:{
                         type: Number,
                         reflectToAttribute: true,
                         notify: true,
                         readOnly:true,
+                        //observer: 'onSelectedPageNoChange'
+                    },
+                    attrForSelected:{
+                        type: String,
+                        reflectToAttribute: true,
+                        
                     }
 
                 }
@@ -128,7 +135,7 @@ declare var Siema;
             connectToSiemma(){
                 if(!this._isReady) return;
                 const _this = this;
-                this._siemaInstnce = new Siema({
+                this._siemaInstance = new Siema({
                     selector: this,
                     draggable: this.draggable,
                     duration: this.duration,
@@ -144,8 +151,25 @@ declare var Siema;
                 } as IXtalSiemaProperties);
             }
             handleChange(){
-                this['_setSelectedPageNo'](this._siemaInstnce.currentSlide);
+                if(!this._siemaInstance) return;
+                ;
+                const childNodes = this.querySelector('div').childNodes;
+                if(this.attrForSelected && childNodes && childNodes.length > this.selected){
+                    childNodes[this.selected].removeAttribute(this.attrForSelected);
+                }
+                this['_setSelected'](this._siemaInstance.currentSlide);
+                if(this.attrForSelected && childNodes && childNodes.length > this.selected){
+                    const leafNode = childNodes[this.selected].firstChild;
+                    if(leafNode) leafNode.setAttribute(this.attrForSelected, '');
+                }                
             }
+            // onSelectedPageNoChange(){
+            //     if(!this._siemaInstnce) return;
+            //     console.log('onSelectedPageNoChange');
+            //     if(this.selectedPageNo !== this._siemaInstnce.currentSlide){
+            //         this._siemaInstnce.goTo(this.selectedPageNo);
+            //     }
+            // }
             ready(){
                 super.ready();
                 if(typeof Siema === 'undefined'){
@@ -155,7 +179,7 @@ declare var Siema;
                 }
                 this.style.display = 'block';
                 this._isReady = true;
-                this['_setSelectedPageNo'](0);
+                this['_setSelected'](0);
                 this.connectToSiemma();
 
                 // const container = this.$.siennaContainer;

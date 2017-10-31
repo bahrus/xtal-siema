@@ -13,7 +13,7 @@
          */
         class XtalSiema extends polymerMixin(HTMLElement) {
             get SiemaInstance() {
-                return this._siemaInstnce;
+                return this._siemaInstance;
             }
             static get is() { return 'xtal-siema'; }
             static get properties() {
@@ -91,11 +91,15 @@
                         reflectToAttribute: true,
                         observer: 'connectToSiemma',
                     },
-                    selectedPageNo: {
+                    selected: {
                         type: Number,
                         reflectToAttribute: true,
                         notify: true,
                         readOnly: true,
+                    },
+                    attrForSelected: {
+                        type: String,
+                        reflectToAttribute: true,
                     }
                 };
             }
@@ -103,7 +107,7 @@
                 if (!this._isReady)
                     return;
                 const _this = this;
-                this._siemaInstnce = new Siema({
+                this._siemaInstance = new Siema({
                     selector: this,
                     draggable: this.draggable,
                     duration: this.duration,
@@ -119,8 +123,27 @@
                 });
             }
             handleChange() {
-                this['_setSelectedPageNo'](this._siemaInstnce.currentSlide);
+                if (!this._siemaInstance)
+                    return;
+                ;
+                const childNodes = this.querySelector('div').childNodes;
+                if (this.attrForSelected && childNodes && childNodes.length > this.selected) {
+                    childNodes[this.selected].removeAttribute(this.attrForSelected);
+                }
+                this['_setSelected'](this._siemaInstance.currentSlide);
+                if (this.attrForSelected && childNodes && childNodes.length > this.selected) {
+                    const leafNode = childNodes[this.selected].firstChild;
+                    if (leafNode)
+                        leafNode.setAttribute(this.attrForSelected, '');
+                }
             }
+            // onSelectedPageNoChange(){
+            //     if(!this._siemaInstnce) return;
+            //     console.log('onSelectedPageNoChange');
+            //     if(this.selectedPageNo !== this._siemaInstnce.currentSlide){
+            //         this._siemaInstnce.goTo(this.selectedPageNo);
+            //     }
+            // }
             ready() {
                 super.ready();
                 if (typeof Siema === 'undefined') {
@@ -130,7 +153,7 @@
                 }
                 this.style.display = 'block';
                 this._isReady = true;
-                this['_setSelectedPageNo'](0);
+                this['_setSelected'](0);
                 this.connectToSiemma();
                 // const container = this.$.siennaContainer;
                 // console.log(container);

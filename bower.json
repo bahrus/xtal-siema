@@ -3,7 +3,8 @@
   "main": "xtal-siema.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
-    "xtal-link-preview": "bahrus/xtal-link-preview#^0.0.4"
+    "xtal-link-preview": "bahrus/xtal-link-preview#^0.0.5",
+    "xtal-decorator": "bahrus/xtal-decorator#^0.0.7"
   },
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
