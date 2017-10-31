@@ -35,6 +35,10 @@
                     nextPage: function(e){
                       var myCarousel = this.$.myCarousel;
                       myCarousel.newSelection = this.selectedPage + 1;
+                    },
+                    prevPage: function(e){
+                      var myCarousel = this.$.myCarousel;
+                      myCarousel.newSelection = this.selectedPage - 1;
                     }
                   }]
                 </script>
@@ -72,7 +76,7 @@
               <xtal-link-preview href="https://github.com/QuinntyneBrown/ce-carousel"></xtal-link-preview>
             </xtal-siema>
             <div>Selected Page No: [[selectedPage]]</div>
-            <div><button on-click="nextPage">Next Page</button></div>
+            <div><button on-click="prevPage">Previous Page</button>&nbsp;<button on-click="nextPage">Next Page</button></div>
             
           </template>
         </dom-bind>
