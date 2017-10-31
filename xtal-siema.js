@@ -100,6 +100,12 @@
                     attrForSelected: {
                         type: String,
                         reflectToAttribute: true,
+                    },
+                    newSelection: {
+                        type: Number,
+                        reflectToAttribute: true,
+                        observer: 'onNewSelection',
+                        value: -1,
                     }
                 };
             }
@@ -121,6 +127,15 @@
                         _this.handleChange();
                     }
                 });
+            }
+            onNewSelection() {
+                if (this.newSelection < 0)
+                    return;
+                if (!this._siemaInstance)
+                    return;
+                //debugger;
+                this._siemaInstance.goTo(this.newSelection);
+                //this['_setSelected'](this.newSelection);
             }
             handleChange() {
                 if (!this._siemaInstance)

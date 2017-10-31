@@ -13,6 +13,7 @@ export interface IXtalSiemaProperties{
 export interface IExtendedSiemaProperties extends IXtalSiemaProperties{
     selected: number | polymer.PropObjectType,
     attrForSelected:  string | polymer.PropObjectType,
+    newSelection: number | polymer.PropObjectType,
 }
 
 declare var Siema;
@@ -37,6 +38,7 @@ declare var Siema;
             static get is(){return 'xtal-siema';}
             duration:number;easing: string;perPage:number;startIndex:number;draggable:boolean;
             multipleDrag:boolean;threshold:number;loop: boolean;selected:number;attrForSelected: string;
+            newSelection:number;
             static get properties() : IExtendedSiemaProperties{
                 return{
                     /**
@@ -123,6 +125,12 @@ declare var Siema;
                         type: String,
                         reflectToAttribute: true,
                         
+                    },
+                    newSelection:{
+                        type: Number,
+                        reflectToAttribute: true,
+                        observer: 'onNewSelection',
+                        value: -1,
                     }
 
                 }
@@ -149,6 +157,13 @@ declare var Siema;
                         _this.handleChange();
                     }
                 } as IXtalSiemaProperties);
+            }
+            onNewSelection(){
+                if(this.newSelection < 0) return;
+                if(!this._siemaInstance) return;
+                //debugger;
+                this._siemaInstance.goTo(this.newSelection);
+                //this['_setSelected'](this.newSelection);
             }
             handleChange(){
                 if(!this._siemaInstance) return;

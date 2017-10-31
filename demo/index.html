@@ -28,19 +28,18 @@
     <demo-snippet>
       <template>
         <div>
-          <!-- <xtal-decorator>
+          <xtal-decorator>
               <template>
                 <script type="text/ecmascript">
                   [{
                     nextPage: function(e){
                       var myCarousel = this.$.myCarousel;
-                      debugger;
-                      myCarousel.selectedPageNo++;
+                      myCarousel.newSelection = this.selectedPage + 1;
                     }
                   }]
                 </script>
               </template>
-            </xtal-decorator> -->
+            </xtal-decorator>
         <dom-bind>
           <template>
             <style>
