@@ -163,7 +163,13 @@ declare var Siema;
                 if(!this._siemaInstance) return;
                 //debugger;
                 this._siemaInstance.goTo(this.newSelection);
+                this.invokeResizeHack();
                 //this['_setSelected'](this.newSelection);
+            }
+            invokeResizeHack(){
+                var event = document.createEvent('HTMLEvents');
+                event.initEvent('resize', true, false);
+                this.dispatchEvent(event);
             }
             handleChange(){
                 if(!this._siemaInstance) return;
@@ -196,7 +202,7 @@ declare var Siema;
                 this._isReady = true;
                 this['_setSelected'](0);
                 this.connectToSiemma();
-
+                this.invokeResizeHack();
                 // const container = this.$.siennaContainer;
                 // console.log(container);
 
