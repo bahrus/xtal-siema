@@ -36,6 +36,7 @@
           <xtal-link-preview href="https://developers.google.com/web/fundamentals/web-components/examples/"></xtal-link-preview>
           <xtal-link-preview href="https://github.com/Comcast/polaris"></xtal-link-preview>
           <xtal-link-preview href="https://github.com/QuinntyneBrown/ce-carousel"></xtal-link-preview>
+          <xtal-link-preview href="https://github.com/Fdom92/stencil-fetch"></xtal-link-preview>
     </xtal-siema>
   </template>
 </custom-element-demo>
