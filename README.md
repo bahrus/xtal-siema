@@ -39,6 +39,7 @@
           <xtal-link-preview href="https://github.com/Fdom92/stencil-fetch"></xtal-link-preview>
           <xtal-link-preview href="https://github.com/Fdom92/stencil-payment"></xtal-link-preview>
           <xtal-link-preview href="https://github.com/Fdom92/stencil-voice2text"></xtal-link-preview>
+          <xtal-link-preview href="https://stackblitz.com/edit/angular-ce-poc-material-v2"></xtal-link-preview>
     </xtal-siema>
   </template>
 </custom-element-demo>
