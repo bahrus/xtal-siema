@@ -86,9 +86,11 @@
                   <div class="textDesc">SkateJS Router</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://patternfly-webcomponents.github.io">
+                  <div class="loader"></div>
                   <div class="textDesc">Redhat Patternfly</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="http://blog.htmltreegrid.com/post/Best-WebComponents-DataGrid-DataTable.aspx">
+                  <div class="loader"></div>
                   <div class="textDesc">HTML Treegrid</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://www.predix-ui.com/">
@@ -104,6 +106,7 @@
                   <div class="textDesc">lit-html</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://medium.com/@mikeal/ive-seen-the-future-it-s-full-of-html-2577246f2210">
+                  <div class="loader"></div>
                   <div class="textDesc">@mikeal</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://developers.google.com/web/fundamentals/web-components/examples/">
@@ -115,6 +118,7 @@
                   <div class="textDesc">Polaris</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://github.com/QuinntyneBrown/ce-carousel">
+                  <div class="loader"></div>
                   <div class="textDesc">cd-carousel</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://github.com/Fdom92/stencil-fetch">
@@ -125,7 +129,7 @@
                   <div class="loader"></div>
                   <div class="textDesc">Stencil Payment</div>
                 </xtal-link-preview>
-                
+
                 <xtal-link-preview href="https://github.com/Fdom92/stencil-voice2text">
                   <div class="loader"></div>
                   <div class="textDesc">Stencil Voice2Text</div>
