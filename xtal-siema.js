@@ -176,7 +176,10 @@
                 this._isReady = true;
                 this['_setSelected'](0);
                 this.connectToSiemma();
-                this.invokeResizeHack();
+                setTimeout(() => {
+                    this.invokeResizeHack();
+                }, 1);
+                //this.invokeResizeHack();
                 // const container = this.$.siennaContainer;
                 // console.log(container);
             }
