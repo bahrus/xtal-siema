@@ -204,7 +204,7 @@ declare var Siema;
                 this.connectToSiemma();
                 setTimeout(() =>{
                     this.invokeResizeHack();
-                }, 1)
+                }, 100)
                 //this.invokeResizeHack();
                 // const container = this.$.siennaContainer;
                 // console.log(container);
