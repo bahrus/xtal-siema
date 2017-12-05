@@ -134,6 +134,10 @@
                   <div class="loader"></div>
                   <div class="textDesc">Stencil Voice2Text</div>
                 </xtal-link-preview>
+                <xtal-link-preview href="https://github.com/mappmechanic/awesome-stenciljs">
+                  <div class="loader"></div>
+                  <div class="textDesc">Awesome Stencil</div>
+                </xtal-link-preview>
                 <xtal-link-preview href="https://stackblitz.com/edit/angular-ce-poc-material-v2">
                   <div class="loader"></div>
                   <div class="textDesc">Angular material elements</div>
