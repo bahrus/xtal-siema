@@ -129,26 +129,21 @@
                   <div class="loader"></div>
                   <div class="textDesc">Stencil Payment</div>
                 </xtal-link-preview>
-
-                <xtal-link-preview href="https://github.com/Fdom92/stencil-voice2text">
-                  <div class="loader"></div>
-                  <div class="textDesc">Stencil Voice2Text</div>
-                </xtal-link-preview>
                 <xtal-link-preview href="https://github.com/mappmechanic/awesome-stenciljs">
                   <div class="loader"></div>
                   <div class="textDesc">Awesome Stencil</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="https://github.com/Fdom92/stencil-voice2text">
+                  <div class="loader"></div>
+                  <div class="textDesc">Stencil Voice2Text</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://stackblitz.com/edit/angular-ce-poc-material-v2">
                   <div class="loader"></div>
                   <div class="textDesc">Angular material elements</div>
                 </xtal-link-preview>
-                <xtal-link-preview href="https://github.com/github/include-fragment-element">
+                <xtal-link-preview href="https://github.com/tanepiper/mm-components">
                   <div class="loader"></div>
-                  <div class="textDesc">Github's include fragment</div>
-                </xtal-link-preview>
-                <xtal-link-preview href="https://github.com/github/time-elements">
-                  <div class="loader"></div>
-                  <div class="textDesc">Github's time elements</div>
+                  <div class="testDesc">Music Markup components</div>
                 </xtal-link-preview>
     </xtal-siema>
   </template>
