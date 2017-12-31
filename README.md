@@ -145,6 +145,10 @@
                   <div class="loader"></div>
                   <div class="testDesc">Music Markup components</div>
                 </xtal-link-preview>
+                <xtal-link-preview href="https://aframe.io/">
+                  <div class="loader"></div>
+                  <div class="testDesc">A-frame Web VR</div>
+                </xtal-link-preview>
     </xtal-siema>
   </template>
 </custom-element-demo>
