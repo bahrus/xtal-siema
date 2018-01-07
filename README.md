@@ -149,6 +149,11 @@
                   <div class="loader"></div>
                   <div class="testDesc">A-frame Web VR</div>
                 </xtal-link-preview>
+                <xtal-link-preview href="https://github.com/goessner/canvas-area">
+                  <div class="loader"></div>
+                  <div class="testDesc">Canvas Area</div>
+                </xtal-link-preview>
+                
     </xtal-siema>
   </template>
 </custom-element-demo>
