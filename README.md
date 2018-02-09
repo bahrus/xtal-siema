@@ -157,6 +157,10 @@
                   <div class="loader"></div>
                   <div class="testDesc">Twitter components</div>
                 </xtal-link-preview>
+                <xtal-link-preview href="https://jpmorganchase.github.io/perspective/">
+                  <div class="loader"></div>
+                  <div class="testDesc">JPMorgan Chase Perspecitve</div>
+                </xtal-link-preview>
                 
     </xtal-siema>
   </template>
