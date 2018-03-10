@@ -101,7 +101,7 @@
                   <div class="loader"></div>
                   <div class="textDesc">x-tag</div>
                 </xtal-link-preview>
-                <xtal-link-preview href="https://codepen.io/justinfagnani/project/editor/Zgbpme">
+                <xtal-link-preview href="https://github.com/Polymer/lit-html/tree/master/demo">
                   <div class="loader"></div>
                   <div class="textDesc">lit-html</div>
                 </xtal-link-preview>
@@ -165,7 +165,10 @@
                   <div class="loader"></div>
                   <div class="testDesc">Org Charts</div>
                 </xtal-link-preview>
-                
+                <xtal-link-preview href="https://github.com/dsolimando/hnpwa-mobileelements/tree/pagination/www/lib">
+                  <div class="loader"></div>
+                  <div class="testDesc">HNPWA Mobile Elements</div>
+                </xtal-link-preview>
     </xtal-siema>
   </template>
 </custom-element-demo>
