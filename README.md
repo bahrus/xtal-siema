@@ -143,31 +143,35 @@
                 </xtal-link-preview>
                 <xtal-link-preview href="https://github.com/tanepiper/mm-components">
                   <div class="loader"></div>
-                  <div class="testDesc">Music Markup components</div>
+                  <div class="textDesc">Music Markup components</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://aframe.io/">
                   <div class="loader"></div>
-                  <div class="testDesc">A-frame Web VR</div>
+                  <div class="textDesc">A-frame Web VR</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://github.com/PolymerLabs/amp-viewer/blob/master/amp-viewer.js">
                   <div class="loader"></div>
-                  <div class="testDesc">Amp Viewer</div>
+                  <div class="textDesc">Amp Viewer</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://twittercommunity.com/t/announcing-twitter-status-and-twitter-user-web-components-for-displaying-tweets-and-users/100433?u=abraham">
                   <div class="loader"></div>
-                  <div class="testDesc">Twitter components</div>
+                  <div class="textDesc">Twitter components</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://jpmorganchase.github.io/perspective/">
                   <div class="loader"></div>
-                  <div class="testDesc">JPMorgan Chase Perspecitve</div>
+                  <div class="textDesc">JPMorgan Chase Perspecitve</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://github.com/dabeng/OrgChart-Webcomponents">
                   <div class="loader"></div>
-                  <div class="testDesc">Org Charts</div>
+                  <div class="textDesc">Org Charts</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://github.com/dsolimando/hnpwa-mobileelements/tree/pagination/www/lib">
                   <div class="loader"></div>
-                  <div class="testDesc">HNPWA Mobile Elements</div>
+                  <div class="textDesc">HNPWA Mobile Elements</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="http://handsontable.github.io/hot-table/">
+                  <div class="loader"></div>
+                  <div class="textDesc">Polymer Element wrapper for Handsontable</div>
                 </xtal-link-preview>
     </xtal-siema>
   </template>
