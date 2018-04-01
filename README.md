@@ -61,6 +61,18 @@
                     Awesome Web Component Libraries not found on WebComponents.org (until now)
                   </div>
                 </div>
+                <xtal-link-preview href="https://medium.com/@valdrinkoshi/performant-expand-collapse-animations-93d99e80f7f">
+                  <div class="loader"></div>
+                  <div class="textDesc">Expand/Collapse Animations</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="https://festify.github.io/ken-burns-carousel/">
+                  <div class="loader"></div>
+                  <div class="textDesc">Ken Burns Slide Show</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="https://github.com/splitinfinities/lottie-wc">
+                  <div class="loader"></div>
+                  <div class="textDesc">Lottie Animations</div>
+                </xtal-link-preview>
                 <xtal-link-preview href="https://onsen.io">
                   <div class="loader"></div>
                   <div class="textDesc">Onsen UI</div>
