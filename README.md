@@ -69,17 +69,13 @@
                   <div class="loader"></div>
                   <div class="textDesc">Material Web Components</div>
                 </xtal-link-preview>
-                <xtal-link-preview href="https://meetup.github.io/swarm-design-system/components">
+                <xtal-link-preview href="https://meetup.github.io/swarm-design-system/">
                   <div class="loader"></div>
                   <div class="textDesc">Meetup Web Components</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="https://ni.github.io/design-system/elements/buttons/">
                   <div class="loader"></div>
                   <div class="textDesc">Fuse Design Systems</div>
-                </xtal-link-preview>
-                <xtal-link-preview href="http://mixpanel.github.io/mixpanel-common/examples/style-guide-new/">
-                  <div class="loader"></div>
-                  <div class="textDesc">Mixpanel Design</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="http://mixpanel.github.io/mixpanel-common/examples/style-guide-new/">
                   <div class="loader"></div>
@@ -132,6 +128,10 @@
                 <xtal-link-preview href="https://github.com/skatejs/sk-router">
                   <div class="loader"></div>
                   <div class="textDesc">SkateJS Router</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="https://patternfly-webcomponents.github.io">
+                  <div class="loader"></div>
+                  <div class="textDesc">Redhat Patternfly</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="http://blog.htmltreegrid.com/post/Best-WebComponents-DataGrid-DataTable.aspx">
                   <div class="loader"></div>
