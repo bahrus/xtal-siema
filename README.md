@@ -61,18 +61,42 @@
                     Awesome Web Component Libraries not found on WebComponents.org (until now)
                   </div>
                 </div>
-                 <xtal-link-preview href="https://stencilcomponents.com/">
+                <xtal-link-preview href="https://github.com/RHelements">
+                  <div class="loader"></div>
+                  <div class="textDesc">RHElements</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="https://github.com/material-components/material-components-web-components">
+                  <div class="loader"></div>
+                  <div class="textDesc">Material Web Components</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="https://meetup.github.io/swarm-design-system/components">
+                  <div class="loader"></div>
+                  <div class="textDesc">Meetup Web Components</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="https://ni.github.io/design-system/elements/buttons/">
+                  <div class="loader"></div>
+                  <div class="textDesc">Fuse Design Systems</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="http://mixpanel.github.io/mixpanel-common/examples/style-guide-new/">
+                  <div class="loader"></div>
+                  <div class="textDesc">Mixpanel Design</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="http://mixpanel.github.io/mixpanel-common/examples/style-guide-new/">
+                  <div class="loader"></div>
+                  <div class="textDesc">Mixpanel Design</div>
+                </xtal-link-preview>
+                <xtal-link-preview href="https://stencilcomponents.com/">
                   <div class="loader"></div>
                   <div class="textDesc">Stencil Components</div>
-                </xtal-link-preview>
+                </xtal-link-preview> 
                 <xtal-link-preview href="https://www.predix-ui.com/">
                   <div class="loader"></div>
                   <div class="textDesc">Predix Components</div>
-                </xtal-link-preview>
+                </xtal-link-preview> 
                 <xtal-link-preview href="https://ciampo.github.io/macro-carousel/demo/">
                   <div class="loader"></div>
                   <div class="textDesc">macro-carousel</div>
-                </xtal-link-preview>                 
+                </xtal-link-preview>      
                 <xtal-link-preview href="https://medium.com/@valdrinkoshi/performant-expand-collapse-animations-93d99e80f7f">
                   <div class="loader"></div>
                   <div class="textDesc">Expand/Collapse Animations</div>
@@ -108,10 +132,6 @@
                 <xtal-link-preview href="https://github.com/skatejs/sk-router">
                   <div class="loader"></div>
                   <div class="textDesc">SkateJS Router</div>
-                </xtal-link-preview>
-                <xtal-link-preview href="https://patternfly-webcomponents.github.io">
-                  <div class="loader"></div>
-                  <div class="textDesc">Redhat Patternfly</div>
                 </xtal-link-preview>
                 <xtal-link-preview href="http://blog.htmltreegrid.com/post/Best-WebComponents-DataGrid-DataTable.aspx">
                   <div class="loader"></div>
