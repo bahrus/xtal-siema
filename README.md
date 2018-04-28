@@ -52,7 +52,7 @@
                
     </style>
     <link rel="import" href="xtal-siema.html">
-    <script async src="https://cdn.jsdelivr.net/npm/xtal-link-preview@0.0.13/xtal-link-preview.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/xtal-link-preview@0.0.14/xtal-link-preview.js"></script>
     <xtal-siema 
           duration="200" easing="ease-out" per-page="1" start-index="0" draggable multiple-drag threshold="20"
           style="height: 200px" attr-for-selected="preview">
