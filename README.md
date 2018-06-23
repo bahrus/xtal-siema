@@ -61,6 +61,10 @@
                     Awesome Web Component Libraries not found on WebComponents.org (until now)
                   </div>
                 </div>
+                <xtal-link-preview href="https://css-doodle.com/">
+                  <div class="loader"></div>
+                  <div class="textDesc">CSS Doodle</div>
+                </xtal-link-preview>
                 <xtal-link-preview href="https://github.com/RHelements">
                   <div class="loader"></div>
                   <div class="textDesc">RHElements</div>
