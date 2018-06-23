@@ -65,6 +65,10 @@
                   <div class="loader"></div>
                   <div class="textDesc">CSS Doodle</div>
                 </xtal-link-preview>
+                <xtal-link-preview href="https://vaadin.com/directory">
+                  <div class="loader"></div>
+                  <div class="textDesc">Vaadin Directory</div>
+                </xtal-link-preview>
                 <xtal-link-preview href="https://github.com/RHelements">
                   <div class="loader"></div>
                   <div class="textDesc">RHElements</div>
