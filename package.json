@@ -1,5 +1,26 @@
 {
+  "name": "xtal-siema",
+  "flat": true,
+  "version": "0.0.0",
+  "description": "Web component wrapper around the lightweight Siema carousel library",
+  "main": "xtal-siema.js",
+  "repository": "https://github.com/bahrus/xtal-siema",
+  "author": "bahrus <anderson.bruce.b@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "siema": "^1.4.6"
+    "siema": "^1.5.1",
+    "xtal-latx": "0.0.17"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+    "@polymer/polymer": "^3.0.0",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "jiife": "^0.0.3",
+    "wct-browser-legacy": "^1.0.0"
+  },
+  "resolutions": {
+    "type-detect": "0.1.1",
+    "supports-color": "3.1.2",
+    "samsam": "1.1.3"
   }
 }
