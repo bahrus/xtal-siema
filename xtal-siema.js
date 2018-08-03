@@ -4,8 +4,8 @@ const duration = 'duration';
 const easing = 'easing';
 const per_page = 'per-page';
 const start_index = 'start-index';
-const undraggable = 'draggable';
-const single_drag = 'multiple-drag';
+const undraggable = 'undraggable';
+const single_drag = 'sinle-drag';
 const threshold = 'threshold';
 const loop = 'loop';
 const selected = 'selected';
@@ -171,11 +171,11 @@ class XtalSiema extends XtallatX(HTMLElement) {
         const _this = this;
         this._siemaInstance = new Siema({
             selector: this,
-            draggable: this.undraggable,
+            draggable: !this.undraggable,
             duration: this.duration,
             easing: this.easing,
             loop: this.loop,
-            multipleDrag: this.singleDrag,
+            multipleDrag: !this.singleDrag,
             perPage: this.perPage,
             startIndex: this.startIndex,
             threshold: this.threshold,
