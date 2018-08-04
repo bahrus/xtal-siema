@@ -144,6 +144,8 @@ class XtalSiema extends XtallatX(HTMLElement)  {
         this.attr(new_selection, val.toString());
     }
 
+
+
     static get observedAttributes(){
         return super.observedAttributes.concat([duration, easing, per_page, start_index, undraggable, single_drag, threshold, loop, attr_for_selected, new_selection]);
     }
@@ -159,7 +161,6 @@ class XtalSiema extends XtallatX(HTMLElement)  {
             case duration:
             case start_index:
             case threshold:
-            case new_selection:
                 this[unme] = parseFloat(newVal);
                 break;
             case easing:
@@ -172,9 +173,9 @@ class XtalSiema extends XtallatX(HTMLElement)  {
                 this[unme] = newVal !== null;
                 break;
             case new_selection:
-            this[unme] = parseFloat(newVal);
-            action = 'onNewSelection'
-            break;
+                this[unme] = parseFloat(newVal);
+                action = 'onNewSelection'
+                break;
         }
         this[action]();
     }
@@ -206,6 +207,12 @@ class XtalSiema extends XtallatX(HTMLElement)  {
         this._siemaInstance.goTo(this.newSelection);
         this.invokeResizeHack();
         //this['_setSelected'](this.newSelection);
+    }
+    goNext(){
+        this.newSelection = this.selected + 1;;
+    }
+    goBack(){
+        this.newSelection = this.selected - 1;;
     }
     invokeResizeHack() {
         var event = document.createEvent('HTMLEvents');

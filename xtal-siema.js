@@ -146,7 +146,6 @@ class XtalSiema extends XtallatX(HTMLElement) {
             case duration:
             case start_index:
             case threshold:
-            case new_selection:
                 this[unme] = parseFloat(newVal);
                 break;
             case easing:
@@ -193,6 +192,14 @@ class XtalSiema extends XtallatX(HTMLElement) {
         this._siemaInstance.goTo(this.newSelection);
         this.invokeResizeHack();
         //this['_setSelected'](this.newSelection);
+    }
+    goNext() {
+        this.newSelection = this.selected + 1;
+        ;
+    }
+    goBack() {
+        this.newSelection = this.selected - 1;
+        ;
     }
     invokeResizeHack() {
         var event = document.createEvent('HTMLEvents');
