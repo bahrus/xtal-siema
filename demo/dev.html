@@ -1,16 +1,21 @@
-# \<xtal-siema\>
+<!doctype html>
+<html lang="en">
 
-Web component wrapper around the lightweight Siema carousel library
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-In demo below, drag with your mouse / finger.  Or use next / previous buttons.
+  <title>xtal-siema demo</title>
 
-<!--
-```
-<custom-element-demo>
-  <template>
-  <div>
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="https://unpkg.com/xtal-siema@0.0.0/xtal-siema.js?module"></script>
+
+
+</head>
+
+<body>
+  <div class="vertical-section-container centered">
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="../xtal-siema.js"></script>
     <script type="module" src="https://unpkg.com/wired-button@0.7.0/wired-button.js?module"></script>
     <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.24/xtal-link-preview.js?module"></script>
     <script type="module" src="https://unpkg.com/p-d.p-u@0.0.61/p-d-x.js?module"></script>
@@ -39,6 +44,10 @@ In demo below, drag with your mouse / finger.  Or use next / previous buttons.
         <div class="loader"></div>
         <div class="textDesc">Material Web Components</div>
       </xtal-link-preview>
+      <!-- <xtal-link-preview href="https://meetup.github.io/swarm-design-system">
+        <div class="loader"></div>
+        <div class="textDesc">Meetup Web Components</div>
+      </xtal-link-preview> -->
       <xtal-link-preview href="https://ni.github.io/design-system/elements/buttons/">
         <div class="loader"></div>
         <div class="textDesc">Fuse Design Systems</div>
@@ -238,25 +247,6 @@ In demo below, drag with your mouse / finger.  Or use next / previous buttons.
         } */
     </style>
   </div>
-    </template>
-</custom-element-demo>
-```
--->
+</body>
 
-## Install the Polymer-CLI
-
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) and npm (packaged with [Node.js](https://nodejs.org)) installed. Run `npm install` to install your element's dependencies, then run `polymer serve` to serve your element locally.
-
-## Viewing Your Element
-
-```
-$ polymer serve
-```
-
-## Running Tests
-
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+</html>
