@@ -165,7 +165,7 @@ class XtalSiema extends XtallatX(HTMLElement) {
         }
         this[action]();
     }
-    connectToSiemma() {
+    connectToSiema() {
         if (!this._connected)
             return;
         const _this = this;
@@ -218,7 +218,7 @@ class XtalSiema extends XtallatX(HTMLElement) {
         this._connected = true;
         this.style.display = 'block';
         this.selected = 0;
-        this.connectToSiemma();
+        this.connectToSiema();
         setTimeout(() => {
             this.invokeResizeHack();
         }, 100);
