@@ -193,13 +193,9 @@ class XtalSiema extends XtallatX(HTMLElement) {
         this.invokeResizeHack();
         //this['_setSelected'](this.newSelection);
     }
-    goNext() {
-        this.newSelection = this.selected + 1;
-        ;
-    }
-    goBack() {
-        this.newSelection = this.selected - 1;
-        ;
+    set pageJump(val) {
+        const inc = typeof (val) === 'number' ? val : parseInt(val);
+        this.newSelection = this.selected + inc;
     }
     invokeResizeHack() {
         var event = document.createEvent('HTMLEvents');

@@ -21,19 +21,17 @@
     <script type="module" src="https://unpkg.com/p-d.p-u@0.0.61/p-d-x.js?module"></script>
     <h3>Basic xtal-siema demo</h3>
     <div>
-      <wired-button on-click="prevPage">Previous Page</wired-button>&nbsp;
-      <wired-button on-click="nextPage">Next Page</wired-button>
+      <wired-button on-click="prevPage" data-jump="-1">Previous Page</wired-button>&nbsp;
+      <wired-button on-click="nextPage" data-jump="1">Next Page</wired-button>
     </div>
+    <p-d on="click" if="wired-button" to="{pageJump:target.dataset.jump}"></p-d>
     <xtal-siema style="height: 300px" attr-for-selected="preview">
       <div class="openingSlide">
         <div class="textDesc">
           Web Component links of interest
         </div>
       </div>
-      <xtal-link-preview href="https://github.com/css-doodle/css-doodle" >
-        <div class="loader"></div>
-        <div class="textDesc">CSS Doodle</div>
-      </xtal-link-preview>
+
       <xtal-link-preview href="https://vaadin.com/directory">
         <div class="loader"></div>
         <div class="textDesc">Vaadin Directory</div>
@@ -193,6 +191,10 @@
       <xtal-link-preview href="https://medium.com/samsung-internet-dev/making-a-simple-gamepad-web-component-23b2ac262f56">
         <div class="loader"></div>
         <div class="textDesc">Gamepad Web Component</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/css-doodle/css-doodle" >
+        <div class="loader"></div>
+        <div class="textDesc">CSS Doodle</div>
       </xtal-link-preview>
     </xtal-siema>
     <p-d-x on="fetch-complete-changed" to="{href:target.href;innerText:target.title}" skip-init></p-d-x>
