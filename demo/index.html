@@ -16,19 +16,21 @@
 
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script type="module" src="../xtal-siema.js"></script>
-    <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.15/xtal-link-preview.js?module"></script>
+    <script type="module" src="https://unpkg.com/wired-button@0.7.0/wired-button.js?module"></script>
+    <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.23/xtal-link-preview.js?module"></script>
+    <script type="module" src="https://unpkg.com/p-d.p-u@0.0.61/p-d-x.js?module"></script>
     <h3>Basic xtal-siema demo</h3>
     <div>
-      <button on-click="prevPage">Previous Page</button>&nbsp;
-      <button on-click="nextPage">Next Page</button>
+      <wired-button on-click="prevPage">Previous Page</wired-button>&nbsp;
+      <wired-button on-click="nextPage">Next Page</wired-button>
     </div>
     <xtal-siema style="height: 300px" attr-for-selected="preview">
       <div class="openingSlide">
         <div class="textDesc">
-          Awesome Web Component Libraries not found on WebComponents.org (until now)
+          Web Component links of interest
         </div>
       </div>
-      <xtal-link-preview href="https://css-doodle.com/" >
+      <xtal-link-preview href="https://github.com/css-doodle/css-doodle" >
         <div class="loader"></div>
         <div class="textDesc">CSS Doodle</div>
       </xtal-link-preview>
@@ -44,10 +46,10 @@
         <div class="loader"></div>
         <div class="textDesc">Material Web Components</div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://meetup.github.io/swarm-design-system">
+      <!-- <xtal-link-preview href="https://meetup.github.io/swarm-design-system">
         <div class="loader"></div>
         <div class="textDesc">Meetup Web Components</div>
-      </xtal-link-preview>
+      </xtal-link-preview> -->
       <xtal-link-preview href="https://ni.github.io/design-system/elements/buttons/">
         <div class="loader"></div>
         <div class="textDesc">Fuse Design Systems</div>
@@ -193,8 +195,8 @@
         <div class="textDesc">Gamepad Web Component</div>
       </xtal-link-preview>
     </xtal-siema>
-
-
+    <p-d-x on="fetch-complete-changed" to="{href:target.href;innerText:target.title}" skip-init></p-d-x>
+    <a target="_blank">link</a>
 
     <style>
       xtal-link-preview,
