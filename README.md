@@ -4,9 +4,9 @@
 
 # \<xtal-siema\>
 
-Web component wrapper around the lightweight Siema carousel library
+Web component wrapper around the lightweight (3kb minified/gzipped) [Siema carousel library](https://pawelgrzybek.github.io/siema/).
 
-In demo below, drag with your mouse / finger.  Or use next / previous buttons.
+In the demo below, drag with your mouse / finger.  Or use next / previous buttons.
 
 <!--
 ```
