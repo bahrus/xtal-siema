@@ -1,3 +1,7 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/bahrus/xtal-siema)
+
+<a href="https://nodei.co/npm/xtal-siema/"><img src="https://nodei.co/npm/xtal-siema.png"></a>
+
 # \<xtal-siema\>
 
 Web component wrapper around the lightweight Siema carousel library
