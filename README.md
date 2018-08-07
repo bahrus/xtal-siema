@@ -16,8 +16,8 @@ In demo below, drag with your mouse / finger.  Or use next / previous buttons.
     <script type="module" src="https://unpkg.com/p-d.p-u@0.0.61/p-d-x.js?module"></script>
     <h3>Basic xtal-siema demo</h3>
     <div>
-      <wired-button on-click="prevPage" data-jump="-1">Previous Page</wired-button>&nbsp;
-      <wired-button on-click="nextPage" data-jump="1">Next Page</wired-button>
+      <wired-button on-click="prevPage" data-jump="-1">Previous</wired-button>&nbsp;
+      <wired-button on-click="nextPage" data-jump="1">Next</wired-button>
     </div>
     <p-d on="click" if="wired-button" to="{pageJump:target.dataset.jump}"></p-d>
     <xtal-siema style="height: 300px" attr-for-selected="preview">
