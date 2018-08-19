@@ -16,7 +16,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script type="module" src="https://unpkg.com/xtal-siema@0.0.0/xtal-siema.js?module"></script>
     <script type="module" src="https://unpkg.com/wired-button@0.7.0/wired-button.js?module"></script>
-    <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.27/xtal-link-preview.js?module"></script>
+    <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.28/xtal-link-preview.js?module"></script>
     <script type="module" src="https://unpkg.com/p-d.p-u@0.0.61/p-d-x.js?module"></script>
     <h3>Basic xtal-siema demo</h3>
     <div>
@@ -251,8 +251,11 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
         padding: 5px;
         flex-basis: 4;
       }
+      xtal-link-preview>div>details summary::-webkit-details-marker{
+        display:none;
+      }
 
-      xtal-link-preview>title {
+      xtal-link-preview>div>details>summary {
         margin-top: 5px;
         font-weight: 800;
       }
@@ -260,6 +263,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       xtal-link-preview img {
         object-fit: scale-down;
         flex-basis: 3;
+        align-self:flex-start
       }
 
 
