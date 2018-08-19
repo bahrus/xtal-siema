@@ -8,8 +8,8 @@
   "author": "bahrus <anderson.bruce.b@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "siema": "^1.5.1",
-    "xtal-latx": "0.0.17"
+    "siema": "1.5.1",
+    "xtal-latx": "0.0.19"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",

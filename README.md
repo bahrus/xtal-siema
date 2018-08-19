@@ -20,8 +20,8 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
     <script type="module" src="https://unpkg.com/p-d.p-u@0.0.61/p-d-x.js?module"></script>
     <h3>Basic xtal-siema demo</h3>
     <div>
-      <wired-button on-click="prevPage" data-jump="-1">Previous</wired-button>&nbsp;
-      <wired-button on-click="nextPage" data-jump="1">Next</wired-button>
+      <wired-button data-jump="-1">Previous</wired-button>&nbsp;
+      <wired-button data-jump="1">Next</wired-button>
     </div>
     <p-d on="click" if="wired-button" to="{pageJump:target.dataset.jump}"></p-d>
     <xtal-siema style="height: 300px" attr-for-selected="preview">
@@ -30,7 +30,22 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           Web Component links of interest
         </div>
       </div>
-
+      <xtal-link-preview href="https://frontendnews.io/editions/2018-08-15-simple-camera-component">
+        <div class="loader"></div>
+        <div class="textDesc">HOW TO BUILD A SIMPLE CAMERA COMPONENT</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://medium.com/@lucamezzalira/a-night-experimenting-with-lit-html-585a8c69892a">
+        <div class="loader"></div>
+        <div class="textDesc">A night experimenting with lit-html</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/TeamHive/stencil-shimmer">
+        <div class="loader"></div>
+        <div class="textDesc">Stencil Shimmer</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/css-doodle/css-doodle">
+        <div class="loader"></div>
+        <div class="textDesc">CSS Doodle</div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://vaadin.com/directory">
         <div class="loader"></div>
         <div class="textDesc">Vaadin Directory</div>
@@ -187,15 +202,24 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
         <div class="loader"></div>
         <div class="textDesc">Gamepad Web Component</div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/css-doodle/css-doodle" >
-        <div class="loader"></div>
-        <div class="textDesc">CSS Doodle</div>
-      </xtal-link-preview>
+
     </xtal-siema>
     <p-d-x on="fetch-complete-changed" to="{href:target.href;innerText:target.title}" skip-init></p-d-x>
     <a target="_blank">link</a>
 
     <style>
+      xtal-link-preview {
+        overflow-x: hidden;
+      }
+
+      xtal-link-preview:not([fetch-complete]) {
+        display: none;
+      }
+
+      a:not([href]) {
+        display: none;
+      }
+
       xtal-link-preview,
       .openingSlide {
         height: 200px;

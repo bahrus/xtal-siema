@@ -1,6 +1,6 @@
 import Siema from './siema.js';
 import {XtallatX} from 'xtal-latx/xtal-latx.js';
-
+import {define} from 'xtal-latx/define.js';
 const duration = 'duration';
 const easing = 'easing'; 
 const per_page = 'per-page'; 
@@ -243,4 +243,4 @@ class XtalSiema extends XtallatX(HTMLElement)  {
     }
 
 }
-customElements.define(XtalSiema.is, XtalSiema);
+define(XtalSiema);

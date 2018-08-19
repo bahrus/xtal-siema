@@ -30,7 +30,22 @@
           Web Component links of interest
         </div>
       </div>
-
+      <xtal-link-preview href="https://frontendnews.io/editions/2018-08-15-simple-camera-component">
+        <div class="loader"></div>
+        <div class="textDesc">HOW TO BUILD A SIMPLE CAMERA COMPONENT</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://medium.com/@lucamezzalira/a-night-experimenting-with-lit-html-585a8c69892a">
+        <div class="loader"></div>
+        <div class="textDesc">A night experimenting with lit-html</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/TeamHive/stencil-shimmer">
+        <div class="loader"></div>
+        <div class="textDesc">Stencil Shimmer</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/css-doodle/css-doodle">
+        <div class="loader"></div>
+        <div class="textDesc">CSS Doodle</div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://vaadin.com/directory">
         <div class="loader"></div>
         <div class="textDesc">Vaadin Directory</div>
@@ -43,10 +58,6 @@
         <div class="loader"></div>
         <div class="textDesc">Material Web Components</div>
       </xtal-link-preview>
-      <!-- <xtal-link-preview href="https://meetup.github.io/swarm-design-system">
-        <div class="loader"></div>
-        <div class="textDesc">Meetup Web Components</div>
-      </xtal-link-preview> -->
       <xtal-link-preview href="https://ni.github.io/design-system/elements/buttons/">
         <div class="loader"></div>
         <div class="textDesc">Fuse Design Systems</div>
@@ -191,15 +202,24 @@
         <div class="loader"></div>
         <div class="textDesc">Gamepad Web Component</div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/css-doodle/css-doodle" >
-        <div class="loader"></div>
-        <div class="textDesc">CSS Doodle</div>
-      </xtal-link-preview>
+
     </xtal-siema>
     <p-d-x on="fetch-complete-changed" to="{href:target.href;innerText:target.title}" skip-init></p-d-x>
     <a target="_blank">link</a>
 
     <style>
+      xtal-link-preview {
+        overflow-x: hidden;
+      }
+
+      xtal-link-preview:not([fetch-complete]) {
+        display: none;
+      }
+
+      a:not([href]) {
+        display: none;
+      }
+
       xtal-link-preview,
       .openingSlide {
         height: 200px;
