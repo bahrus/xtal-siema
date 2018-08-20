@@ -267,7 +267,10 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       }
 
 
-
+      xtal-link-preview>div>details p{
+        text-align: left;
+        margin-left:5px;
+      }
 
 
       /* Add some padding inside the card container */
