@@ -221,7 +221,8 @@ class XtalSiema extends XtallatX(HTMLElement)  {
         if (!this._siemaInstance) return;
         const childNodes = this.querySelector('div').childNodes;
         if (this.attrForSelected && childNodes && childNodes.length > this.selected) {
-            childNodes[this.selected].removeAttribute(this.attrForSelected);
+            const leafNode = childNodes[this.selected].firstChild;
+            if(leafNode) leafNode.removeAttribute(this.attrForSelected);
         }
         this.selected = (this._siemaInstance.currentSlide);
         if (this.attrForSelected && childNodes && childNodes.length > this.selected) {
