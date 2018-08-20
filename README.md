@@ -24,7 +24,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <wired-button data-jump="1">Next</wired-button>
     </div>
     <p-d on="click" if="wired-button" to="{pageJump:target.dataset.jump}"></p-d>
-    <xtal-siema style="height: 300px" attr-for-selected="preview">
+    <xtal-siema style="height: 300px;width: 500px" attr-for-selected="preview">
       <div class="openingSlide">
         <div class="textDesc">
           Web Component links of interest
