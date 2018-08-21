@@ -204,8 +204,6 @@
       }
 
       xtal-link-preview {
-        /* position: relative;
-        top: 80px; */
         /* Add shadows to create the "card" effect */
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transition: 0.3s;
@@ -224,13 +222,12 @@
 
       xtal-link-preview>div {
         display: flex;
-
-
         height: 100%;
         padding: 5px;
       }
       xtal-link-preview img {
         object-fit: scale-down;
+        
       }
       @media (min-width: 800px) {
         xtal-siema{
@@ -241,8 +238,11 @@
           justify-content: space-around;
         }
         xtal-link-preview img {
-          align-self: flex-start
+          align-self: stretch;
+          filter: drop-shadow(0px 0px 1px rgba(0,0,0,.3))
+          drop-shadow(0px 0px 10px rgba(0,0,0,.3));
         }
+        
       }
 
       @media (max-width: 800px) {
@@ -253,6 +253,9 @@
         }
         xtal-siema{
           height: 300px;
+        }
+        xtal-link-preview img {
+          border: 1px solid #ccc;
         }
         
       }
@@ -272,19 +275,12 @@
       }
 
 
-
-
-
-
-
       /* Add some padding inside the card container */
       .container {
         padding: 2px 16px;
       }
 
       .textDesc {
-        /* position: relative;
-        top: 20%; */
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -292,16 +288,10 @@
 
       .loader {
         display:flex;
-        /* flex-direction: column;
-        justify-content: center;
-        text-align: center; */
         position: relative;
         top: calc(50% - 40px);
         left: calc(50% - 40px);
         border: 16px solid #f3f3f3;
-        /* Light grey */
-        /* border-top: 16px solid #3498db; */
-        /* Blue */
         border-radius: 50%;
         width: 40px;
         height: 40px;
