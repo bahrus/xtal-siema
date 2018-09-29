@@ -13,11 +13,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
 <custom-element-demo>
   <template>
   <div>
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="https://unpkg.com/xtal-siema@0.0.12/xtal-siema.js?module"></script>
-    <script type="module" src="https://unpkg.com/wired-button@0.7.0/wired-button.js?module"></script>
-    <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.30/xtal-link-preview.js?module"></script>
-    <script type="module" src="https://unpkg.com/p-d.p-u@0.0.61/p-d-x.js?module"></script>
+    
     <h3>Basic xtal-siema demo</h3>
     <div>
       <wired-button data-jump="-1">Previous</wired-button>&nbsp;
@@ -30,6 +26,26 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           Web Component links of interest
         </div>
       </div>
+      <xtal-link-preview href="https://www.sencha.com/blog/sencha-roadmap-update/">
+        <div class="loader">
+          ExtJS 7
+        </div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://blog.nightly.mozilla.org/2018/09/06/developer-tools-support-for-web-components-in-firefox-63/">
+        <div class="loader">
+          Firefox Web Component Debugging
+        </div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://www.xoriant.com/blog/big-data-analytics/turbocharge-data-science-workbench.html">
+        <div class="loader">
+          Data Science WCs
+        </div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://www.npmjs.com/package/@wcfactory/cli">
+        <div class="loader">
+          WCFactory
+        </div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://blog.mastykarz.nl/web-components-sharepoint-framework/">
         <div class="loader">
             Web Components in Sharepoint
@@ -307,6 +323,11 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
         }
       }
     </style>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="https://unpkg.com/xtal-siema@0.0.12/xtal-siema.js?module"></script>
+    <script type="module" src="https://unpkg.com/wired-button@0.7.0/wired-button.js?module"></script>
+    <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.30/xtal-link-preview.js?module"></script>
+    <script type="module" src="https://unpkg.com/p-d.p-u@0.0.61/p-d-x.js?module"></script>
   </div>
     </template>
 </custom-element-demo>
