@@ -13,24 +13,62 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
 <custom-element-demo>
   <template>
   <div>
-    
+
     <h3>Basic xtal-siema demo</h3>
     <div>
       <wired-button data-jump="-1">Previous</wired-button>&nbsp;
       <wired-button data-jump="1">Next</wired-button>
     </div>
     <p-d on="click" if="wired-button" to="{pageJump:target.dataset.jump}"></p-d>
-    <xtal-siema  attr-for-selected="preview">
+    <xtal-siema attr-for-selected="preview">
       <div class="openingSlide">
         <div class="textDesc">
           Web Component links of interest
         </div>
       </div>
+      <div>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">The status of Shadow DOM was changed from &quot;Under Consideration&quot; to &quot;In
+            Development&quot; <a href="https://t.co/lPpHQCZj40">https://t.co/lPpHQCZj40</a></p>&mdash; Edge Platform
+          Updates (@MSEdgeUpdates) <a href="https://twitter.com/MSEdgeUpdates/status/1049404077501833218?ref_src=twsrc%5Etfw">October
+            8, 2018</a>
+
+        </blockquote>
+      </div>
+
+      <xtal-link-preview href="">
+        <div>
+          <a href="https://www.chromestatus.com/metrics/feature/timeline/popularity/1689" target="blank">Custom Element
+            Usage</a>
+        </div>
+      </xtal-link-preview>
+      <div>
+        <blockquote class="twitter-tweet" data-lang="en">
+          <p lang="en" dir="ltr">If you folks were still looking for a reason to use <a href="https://twitter.com/hashtag/WebComponents?src=hash&amp;ref_src=twsrc%5Etfw">#WebComponents</a>
+            for real, here is one: The more you delegate to the browser, the smallest your app can be! <a href="https://twitter.com/hashtag/useThePlatform?src=hash&amp;ref_src=twsrc%5Etfw">#useThePlatform</a><br>Demos:
+            <a href="https://t.co/5eo8NrxZQb">https://t.co/5eo8NrxZQb</a> <br>Repo: <a href="https://t.co/dWlM4Hsz4P">https://t.co/dWlM4Hsz4P</a>
+            <a href="https://t.co/63riTOsbzV">pic.twitter.com/63riTOsbzV</a></p>&mdash; Julien Renaux (@julienrenaux) <a
+            href="https://twitter.com/julienrenaux/status/1049212830367539200?ref_src=twsrc%5Etfw">October 8, 2018</a>
+        </blockquote>
+      </div>
+
+      <xtal-link-preview href="https://leanpub.com/web-component-essentials">
+        <div class="loader">
+          New Book
+        </div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://www.pluralsight.com/courses/vanilla-web-components-practical-guide">
+        <div class="loader">
+          PluralSight
+        </div>
+      </xtal-link-preview>
+
       <xtal-link-preview href="https://www.sencha.com/blog/sencha-roadmap-update/">
         <div class="loader">
           ExtJS 7
         </div>
       </xtal-link-preview>
+
       <xtal-link-preview href="https://blog.nightly.mozilla.org/2018/09/06/developer-tools-support-for-web-components-in-firefox-63/">
         <div class="loader">
           Firefox Web Component Debugging
@@ -48,7 +86,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
       <xtal-link-preview href="https://blog.mastykarz.nl/web-components-sharepoint-framework/">
         <div class="loader">
-            Web Components in Sharepoint
+          Web Components in Sharepoint
         </div>
       </xtal-link-preview>
       <xtal-link-preview href="https://boltdesignsystem.com/">
@@ -78,11 +116,22 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <xtal-link-preview href="https://ni.github.io/design-system/elements/buttons/">
         <div class="loader">Fuse Design Systems</div>
       </xtal-link-preview>
-      <xtal-link-preview href="http://mixpanel.github.io/mixpanel-common/examples/style-guide-new/">
-        <div class="loader">Mixpanel Design</div>
-      </xtal-link-preview>
       <xtal-link-preview href="https://stencilcomponents.com/">
         <div class="loader">Stencil Components</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://bendyworks.com/blog/build-a-web-component-with-nutmeg">
+        <div class="loader">
+          Nutmeg
+        </div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/UpperCod/Atomico">
+        <div class="loader">Atomico</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/slimjs">
+        <div class="loader">SlimJS</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://skatejs.netlify.com/">
+        <div class="loader">SkateJS</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://www.predix-ui.com/">
         <div class="loader">Predix Components</div>
@@ -125,6 +174,11 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
       <xtal-link-preview href="https://github.com/x-tag">
         <div class="loader">x-tag</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://bgrins.github.io/xbl-analysis/">
+        <div class="loader">
+          XBL => CE
+        </div>
       </xtal-link-preview>
       <xtal-link-preview href="https://github.com/Polymer/lit-html/tree/master/demo">
         <div class="loader">lit-html</div>
@@ -189,7 +243,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
     <a target="_blank">link</a>
 
     <style>
-      
+
 
       xtal-siema{
         max-width: 600px;
@@ -328,6 +382,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
     <script type="module" src="https://unpkg.com/wired-button@0.7.0/wired-button.js?module"></script>
     <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.30/xtal-link-preview.js?module"></script>
     <script type="module" src="https://unpkg.com/p-d.p-u@0.0.61/p-d-x.js?module"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
     </template>
 </custom-element-demo>
