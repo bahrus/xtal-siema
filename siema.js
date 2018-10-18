@@ -1,7 +1,7 @@
 /**
  * Hi :-) This is a class representing a Siema.
  */
-export default class Siema {
+export  class Siema {
     /**
      * Create a Siema.
      * @param {Object} options - Optional settings object.

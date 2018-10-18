@@ -130,7 +130,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <xtal-link-preview href="https://github.com/slimjs">
         <div class="loader">SlimJS</div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://skatejs.netlify.com/">
+      <xtal-link-preview href="https://github.com/skatejs/skatejs/">
         <div class="loader">SkateJS</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://www.predix-ui.com/">
@@ -377,11 +377,11 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
         }
       }
     </style>
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="https://unpkg.com/xtal-siema@0.0.12/xtal-siema.js?module"></script>
-    <script type="module" src="https://unpkg.com/wired-button@0.7.0/wired-button.js?module"></script>
-    <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.31/xtal-link-preview.js?module"></script>
-    <script type="module" src="https://unpkg.com/p-d.p-u@0.0.61/p-d-x.js?module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/xtal-siema@0.0.20/xtal-siema.iife.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/wired-elements@0.8.2/dist/wired-elements.bundled.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/xtal-link-preview@0.0.31/xtal-link-preview.iife.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/p-d.p-u@0.0.61/p-d.p-d-x.p-u.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
     </template>
@@ -401,8 +401,4 @@ $ polymer serve
 
 ## Running Tests
 
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+WIP
