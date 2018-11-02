@@ -6,14 +6,14 @@ const easing = 'easing';
 const per_page = 'per-page';
 const start_index = 'start-index';
 const undraggable = 'undraggable';
-const single_drag = 'sinle-drag';
+const single_drag = 'single-drag';
 const threshold = 'threshold';
 const loop = 'loop';
 const selected = 'selected';
 const attr_for_selected = 'attr-for-selected';
 const new_selection = 'new-selection';
 /**
- * <xtal-siema></xtal-siema> is a vanilla-ish wrapper around the Siema caousel api
+ * <xtal-siema></xtal-siema> is a vanilla web component wrapper around the Siema caousel api
  * (https://pawelgrzybek.com/siema/ ).
  *
  * @customElement

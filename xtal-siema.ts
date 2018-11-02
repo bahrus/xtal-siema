@@ -13,7 +13,7 @@ const selected = 'selected';
 const attr_for_selected = 'attr-for-selected';
 const new_selection = 'new-selection';
 /**
- * <xtal-siema></xtal-siema> is a vanilla-ish wrapper around the Siema caousel api 
+ * <xtal-siema></xtal-siema> is a vanilla web component wrapper around the Siema caousel api 
  * (https://pawelgrzybek.com/siema/ ).
  * 
  * @customElement
@@ -221,12 +221,12 @@ class XtalSiema extends XtallatX(HTMLElement)  {
         if (!this._siemaInstance) return;
         const childNodes = this.querySelector('div').childNodes;
         if (this.attrForSelected && childNodes && childNodes.length > this.selected) {
-            const leafNode = childNodes[this.selected].firstChild;
+            const leafNode = childNodes[this.selected].firstChild as HTMLElement;
             if(leafNode) leafNode.removeAttribute(this.attrForSelected);
         }
         this.selected = (this._siemaInstance.currentSlide);
         if (this.attrForSelected && childNodes && childNodes.length > this.selected) {
-            const leafNode = childNodes[this.selected].firstChild;
+            const leafNode = childNodes[this.selected].firstChild as HTMLElement;
             if (leafNode) leafNode.setAttribute(this.attrForSelected, '');
         }
     }
