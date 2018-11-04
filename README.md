@@ -15,10 +15,12 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
   <div>
 
     <h3>Basic xtal-siema demo</h3>
+    
     <div>
       <wired-button data-jump="-1">Previous</wired-button>&nbsp;
       <wired-button data-jump="1">Next</wired-button>
     </div>
+    <!-- Pass down ('p-d' how much to jump to the node below) -->
     <p-d on="click" if="wired-button" to="{pageJump:target.dataset.jump}"></p-d>
     <xtal-siema attr-for-selected="preview">
       <div class="openingSlide">
@@ -36,22 +38,16 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
         </blockquote>
       </div>
 
-      <xtal-link-preview href="">
-        <div>
-          <a href="https://www.chromestatus.com/metrics/feature/timeline/popularity/1689" target="blank">Custom Element
-            Usage</a>
-        </div>
-      </xtal-link-preview>
+      <div>
+        <a href="https://www.chromestatus.com/metrics/feature/timeline/popularity/1689" target="blank">Custom Element
+          Usage</a>
+      </div>
       <xtal-link-preview href="https://github.com/matthewp/haunted">
         <div class="loader">
           Haunted Hooks
         </div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://www.w3.org/2001/tag/doc/webcomponents-design-guidelines/">
-        <div class="loader">
-          W3C Guidance
-        </div>
-      </xtal-link-preview>
+
       <div>
         <blockquote class="twitter-tweet" data-lang="en">
           <p lang="en" dir="ltr">If you folks were still looking for a reason to use <a href="https://twitter.com/hashtag/WebComponents?src=hash&amp;ref_src=twsrc%5Etfw">#WebComponents</a>
@@ -143,6 +139,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           Gluon
         </div>
       </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/WebReflection/hyperHTML-Element">
+        <div class="loader">HyperHTML Element</div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://github.com/UpperCod/Atomico">
         <div class="loader">Atomico</div>
       </xtal-link-preview>
@@ -205,6 +204,14 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <xtal-link-preview href="https://developers.google.com/web/fundamentals/web-components/examples/">
         <div class="loader">Best Practices Examples</div>
       </xtal-link-preview>
+      <xtal-link-preview href="https://nervous-stonebraker-1f429b.netlify.com/">
+        <div class="loader">Recommmmendations</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://www.w3.org/2001/tag/doc/webcomponents-design-guidelines/">
+        <div class="loader">
+          W3C Guidance
+        </div>
+      </xtal-link-preview>      
       <xtal-link-preview href="https://github.com/Comcast/polaris">
         <div class="loader">Polaris</div>
       </xtal-link-preview>
@@ -247,19 +254,42 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <xtal-link-preview href="https://github.com/dsolimando/hnpwa-mobileelements/tree/pagination/www/lib">
         <div class="loader">HNPWA Mobile Elements</div>
       </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/lamplightdev/compost-hn">
+        <div class="loader">Compost Elements</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/alexnoz/vanilla-wc-hnpwa">
+        <div class="loader">Vannilla WC PWA</div>
+      </xtal-link-preview>
       <xtal-link-preview href="http://handsontable.github.io/hot-table/">
         <div class="loader">Polymer Element wrapper for Handsontable</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://medium.com/samsung-internet-dev/making-a-simple-gamepad-web-component-23b2ac262f56">
         <div class="loader">Gamepad Web Component</div>
       </xtal-link-preview>
-
+      <xtal-link-preview href="https://micro-frontends.org/">
+        <div class="loader">Micro Frontend</div>
+      </xtal-link-preview>
     </xtal-siema>
-    <p-d-x on="fetch-complete-changed" to="{href:target.href;innerText:target.title}" skip-init></p-d-x>
+    <!-- pass the url and title from the fetch to the hyperlink after completing the fetch -->
+    <p-d-x on="fetch-complete-changed" to="a{href:target.href;innerText:target.title}" skip-init m="1"></p-d-x>
+    <!-- watch for twitter slides -->
+    <css-observe data-xlp="no" id="twitterObserver" observe selector="div[preview]>twitterwidget" ></css-observe>
+    <!-- If a twitter widget is opened, hide the link -->
+    <p-d-x on="latest-match-changed" to="a{dataset.xlp:target.dataset.xlp}" m="1" skip-init></p-d-x>
+    <!-- Watch for simple hyperlink slides -->
+    <css-observe data-xlp="no" id="aObserver" observe selector="div[preview]>a" ></css-observe>
+    <!-- If a simple hyperlink slide is opened, hide the bottom hyperlink -->
+    <p-d-x on="latest-match-changed" to="a{dataset.xlp:target.dataset.xlp}" m="1" skip-init></p-d-x>
+    <!-- Watch for link preview slides -->
+    <css-observe data-xlp="yes" id="xlpObserver" observe selector="xtal-link-preview[preview]" ></css-observe>
+    <!-- If a link preview slide is opened, show the hyperlink -->
+    <p-d-x on="latest-match-changed" to="a{dataset.xlp:target.dataset.xlp}" m="1" skip-init></p-d-x>
     <a target="_blank">link</a>
 
     <style>
-
+      a[data-xlp="no"]{
+        display:none;
+      }
 
       xtal-siema{
         max-width: 600px;
@@ -398,6 +428,8 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
     <script type="module" src="https://cdn.jsdelivr.net/npm/wired-elements@0.8.2/dist/wired-elements.bundled.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/xtal-link-preview@0.0.35/xtal-link-preview.iife.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/p-d.p-u@0.0.74/p-d.p-d-x.p-u.js"></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/if-diff@0.0.5/if-diff.iife.js"></script> -->
+    <script type="module" src="https://unpkg.com/css-observe@0.0.4/css-observe.iife.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
     </template>
