@@ -21,14 +21,14 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <wired-button data-jump="1">Next</wired-button>
     </div>
     <!-- Pass down ('p-d' how much to jump to the node below) -->
-    <p-d on="click" if="wired-button" to="{pageJump:target.dataset.jump}"></p-d>
+    <p-d on="click" if="wired-button" prop="pageJump" val="target.dataset.jump"></p-d>
     <xtal-siema attr-for-selected="preview">
       <div class="openingSlide">
         <div class="textDesc">
           Web Component links of interest
         </div>
       </div>
-      <div>
+      <div style="transform: scale(0.9)">
         <blockquote class="twitter-tweet">
           <p lang="en" dir="ltr">The status of Shadow DOM was changed from &quot;Under Consideration&quot; to &quot;In
             Development&quot; <a href="https://t.co/lPpHQCZj40">https://t.co/lPpHQCZj40</a></p>&mdash; Edge Platform
@@ -42,6 +42,15 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
         <a href="https://www.chromestatus.com/metrics/feature/timeline/popularity/1689" target="blank">Custom Element
           Usage</a>
       </div>
+      <div>
+        <a href="https://www.chromestatus.com/metrics/feature/timeline/popularity/804" target="blank">Shadow DOM
+          Usage</a>
+      </div>
+      <xtal-link-preview href="https://opensource.googleblog.com/2018/11/introducing-web-component-and-data-api-for-quick-draw.html">
+        <div class="loader">
+          Quick Draw
+        </div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://github.com/matthewp/haunted">
         <div class="loader">
           Haunted Hooks
@@ -49,13 +58,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
 
       <div>
-        <blockquote class="twitter-tweet" data-lang="en">
-          <p lang="en" dir="ltr">If you folks were still looking for a reason to use <a href="https://twitter.com/hashtag/WebComponents?src=hash&amp;ref_src=twsrc%5Etfw">#WebComponents</a>
-            for real, here is one: The more you delegate to the browser, the smallest your app can be! <a href="https://twitter.com/hashtag/useThePlatform?src=hash&amp;ref_src=twsrc%5Etfw">#useThePlatform</a><br>Demos:
-            <a href="https://t.co/5eo8NrxZQb">https://t.co/5eo8NrxZQb</a> <br>Repo: <a href="https://t.co/dWlM4Hsz4P">https://t.co/dWlM4Hsz4P</a>
-            <a href="https://t.co/63riTOsbzV">pic.twitter.com/63riTOsbzV</a></p>&mdash; Julien Renaux (@julienrenaux) <a
-            href="https://twitter.com/julienrenaux/status/1049212830367539200?ref_src=twsrc%5Etfw">October 8, 2018</a>
-        </blockquote>
+        <a  href="https://twitter.com/julienrenaux/status/1049212830367539200/photo/1?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1049212830367539200&ref_url=http%3A%2F%2F127.0.0.1%3A8081%2Fdemo%2Findex.html" target="_blank">
+           <img style="height:195px" src="https://pbs.twimg.com/media/Do8B6zrW0AISmNP.jpg">
+          </a>
       </div>
       <xtal-link-preview href="https://www.blazeui.com/">
         <div class="loader">
@@ -102,6 +107,15 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <xtal-link-preview href="https://boltdesignsystem.com/">
         <div class="loader">Bolt Design System</div>
       </xtal-link-preview>
+      <xtal-link-preview href="https://hacks.mozilla.org/2018/11/the-power-of-web-components/">
+        <div class="loader">Power of WCs</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://medium.com/stencil-tricks/a-practical-introduction-to-styling-a-shadow-dom-and-slots-879565a2f423">
+        <div class="loader">Styling Shadow DOM</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/Heydon/bruck">
+        <div class="loader">Lo-fi prototyping</div>
+      </xtal-link-preview>      
       <xtal-link-preview href="https://frontendnews.io/editions/2018-08-15-simple-camera-component">
         <div class="loader">Camera Component</div>
       </xtal-link-preview>
@@ -271,20 +285,21 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
     </xtal-siema>
     <!-- pass the url and title from the fetch to the hyperlink after completing the fetch -->
-    <p-d-x on="fetch-complete-changed" to="a{href:target.href;innerText:target.title}" skip-init m="1"></p-d-x>
+    <p-d on="fetch-complete-changed" to="a" prop="href" val="target.href" skip-init m="1"></p-d>
+    <p-d on="fetch-complete-changed" to="a" prop="innerText" val="target.title" skip-init m="1"></p-d>
     <!-- watch for twitter slides -->
-    <css-observe data-xlp="no" id="twitterObserver" observe selector="div[preview]>twitterwidget" ></css-observe>
+    <css-observe data-xlp="no" id="twitterObserver" observe selector="div[preview]>twitter-widget" ></css-observe>
     <!-- If a twitter widget is opened, hide the link -->
-    <p-d-x on="latest-match-changed" to="a{dataset.xlp:target.dataset.xlp}" m="1" skip-init></p-d-x>
+    <p-d-x on="latest-match-changed" to="a" prop="dataset.xlp" val="target.dataset.xlp" m="1" skip-init></p-d-x>
     <!-- Watch for simple hyperlink slides -->
     <css-observe data-xlp="no" id="aObserver" observe selector="div[preview]>a" ></css-observe>
     <!-- If a simple hyperlink slide is opened, hide the bottom hyperlink -->
-    <p-d-x on="latest-match-changed" to="a{dataset.xlp:target.dataset.xlp}" m="1" skip-init></p-d-x>
+    <p-d-x on="latest-match-changed" to="a" prop="dataset.xlp" val="target.dataset.xlp" m="1" skip-init></p-d-x>
     <!-- Watch for link preview slides -->
     <css-observe data-xlp="yes" id="xlpObserver" observe selector="xtal-link-preview[preview]" ></css-observe>
     <!-- If a link preview slide is opened, show the hyperlink -->
-    <p-d-x on="latest-match-changed" to="a{dataset.xlp:target.dataset.xlp}" m="1" skip-init></p-d-x>
-    <a target="_blank">link</a>
+    <p-d-x on="latest-match-changed" to="a" prop="dataset.xlp" val="target.dataset.xlp" m="1" skip-init></p-d-x>
+    <a class="preview-link" target="_blank">link</a>
 
     <style>
       a[data-xlp="no"]{
@@ -305,7 +320,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       a:not([href]) {
         display: none;
       }
-      a{
+      a[preview-link]{
         display:block;
         margin-top:30px;
       }
@@ -422,14 +437,25 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           transform: rotate(360deg);
         }
       }
+      div[preview]{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      xtal-siema:not([data-selected-changed]) {
+        display:none;
+      }
+      details{
+        overflow: hidden;
+      }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/xtal-siema@0.0.20/xtal-siema.iife.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/xtal-siema@0.0.24/xtal-siema.iife.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/wired-elements@0.8.2/dist/wired-elements.bundled.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/xtal-link-preview@0.0.35/xtal-link-preview.iife.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/p-d.p-u@0.0.74/p-d.p-d-x.p-u.js"></script>
-    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/if-diff@0.0.5/if-diff.iife.js"></script> -->
-    <script type="module" src="https://unpkg.com/css-observe@0.0.4/css-observe.iife.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/p-d.p-u@0.0.91/dist/p-all.iife.js"></script>
+    <script type="module" src="https://unpkg.com/css-observe@0.0.7/dist/css-observe.iife.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
     </template>
