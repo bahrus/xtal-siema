@@ -28,15 +28,11 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           Web Component links of interest
         </div>
       </div>
-      <div style="transform: scale(0.9)">
-        <blockquote class="twitter-tweet">
-          <p lang="en" dir="ltr">The status of Shadow DOM was changed from &quot;Under Consideration&quot; to &quot;In
-            Development&quot; <a href="https://t.co/lPpHQCZj40">https://t.co/lPpHQCZj40</a></p>&mdash; Edge Platform
-          Updates (@MSEdgeUpdates) <a href="https://twitter.com/MSEdgeUpdates/status/1049404077501833218?ref_src=twsrc%5Etfw">October
-            8, 2018</a>
-
-        </blockquote>
-      </div>
+      <xtal-link-preview href="https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/">
+        <div class="loader">
+          Edgewise
+        </div>
+      </xtal-link-preview>
 
       <div>
         <a href="https://www.chromestatus.com/metrics/feature/timeline/popularity/1689" target="blank">Custom Element
@@ -46,6 +42,11 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
         <a href="https://www.chromestatus.com/metrics/feature/timeline/popularity/804" target="blank">Shadow DOM
           Usage</a>
       </div>
+      <xtal-link-preview href="https://github.com/w3c/webcomponents/issues/776">
+        <div class="loader">
+          VS Editor Support?
+        </div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://opensource.googleblog.com/2018/11/introducing-web-component-and-data-api-for-quick-draw.html">
         <div class="loader">
           Quick Draw
@@ -77,7 +78,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           PluralSight
         </div>
       </xtal-link-preview>
-
+      <iframe width="600" height="290" src="https://www.youtube.com/embed/CKy8tKMOP4c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <xtal-link-preview href="https://www.sencha.com/blog/sencha-roadmap-update/">
         <div class="loader">
           ExtJS 7
@@ -112,6 +113,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
       <xtal-link-preview href="https://medium.com/stencil-tricks/a-practical-introduction-to-styling-a-shadow-dom-and-slots-879565a2f423">
         <div class="loader">Styling Shadow DOM</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://deckdeckgo.com/">
+        <div class="loader">Deck Deck Go</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://github.com/Heydon/bruck">
         <div class="loader">Lo-fi prototyping</div>
@@ -294,6 +298,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
     <!-- Watch for simple hyperlink slides -->
     <css-observe data-xlp="no" id="aObserver" observe selector="div[preview]>a" ></css-observe>
     <!-- If a simple hyperlink slide is opened, hide the bottom hyperlink -->
+    <p-d-x on="latest-match-changed" to="a" prop="dataset.xlp" val="target.dataset.xlp" m="1" skip-init></p-d-x>
+    <!-- If an iframe is opened, hide the bottom hyperlink-->
+    <css-observe data-xlp="no" id="iframeObserver" observe selector="iframe[preview]" ></css-observe>
     <p-d-x on="latest-match-changed" to="a" prop="dataset.xlp" val="target.dataset.xlp" m="1" skip-init></p-d-x>
     <!-- Watch for link preview slides -->
     <css-observe data-xlp="yes" id="xlpObserver" observe selector="xtal-link-preview[preview]" ></css-observe>
