@@ -1,7 +1,8 @@
 {
     "tags":[
         {
-            
+            "label": "xtal-siema",
+            "description": "Web Component wrapper around the lightweight Siema Carousel Library"
         }
     ]
 }
