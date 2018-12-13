@@ -22,12 +22,18 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
     </div>
     <!-- Pass down ('p-d' how much to jump to the node below) -->
     <p-d on="click" if="wired-button" prop="pageJump" val="target.dataset.jump"></p-d>
+    
     <xtal-siema attr-for-selected="preview">
       <div class="openingSlide">
         <div class="textDesc">
           Web Component links of interest
         </div>
       </div>
+      <xtal-link-preview href="https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components.html">
+        <div class="loader">
+          ⚡
+        </div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/">
         <div class="loader">
           Edgewise
@@ -171,6 +177,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
       <xtal-link-preview href="https://www.predix-ui.com/">
         <div class="loader">Predix Components</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/Tencent/omi/tree/master/packages/omi-chart">
+        <div class="loader">Omi Charts</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://ciampo.github.io/macro-carousel/demo/">
         <div class="loader">macro-carousel</div>
@@ -466,6 +475,19 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
     </template>
+</custom-element-demo>
+```
+-->
+
+<!--
+```
+<custom-element-demo>
+<template>
+    <div>
+        <wc-info href="https://unpkg.com/xtal-siema@0.0.26/web-components.json"></wc-info>
+        <script type="module" src="https://unpkg.com/wc-info@0.0.8/wc-info.js?module"></script>
+    </div>
+</template>
 </custom-element-demo>
 ```
 -->

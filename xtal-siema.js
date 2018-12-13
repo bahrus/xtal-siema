@@ -47,8 +47,8 @@ class XtalSiema extends XtallatX(HTMLElement) {
         this.attr(duration, val.toString());
     }
     /**
- * It is like a CSS transition-timing-function — describes acceleration curve
- */
+     * It is like a CSS transition-timing-function — describes acceleration curve
+     */
     get easing() {
         return this._easing;
     }
@@ -110,6 +110,9 @@ class XtalSiema extends XtallatX(HTMLElement) {
     set loop(val) {
         this.attr(loop, val, '');
     }
+    /**
+     * Index of currently selected slide
+     */
     get selected() {
         return this._selected;
     }

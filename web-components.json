@@ -1,8 +1,44 @@
 {
-    "tags":[
+    "tags": [
         {
             "label": "xtal-siema",
-            "description": "Web Component wrapper around the lightweight Siema Carousel Library"
+            "description": "Light-weight wrapper around siemal carousel library",
+            "attributes": [
+                {
+                    "label": "start-index",
+                    "description": "Index to start slide show from."
+                },{
+                    "label": "attr-for-selected",
+                    "description": "Specify attribute to set when child element is selected by siema."
+                },{
+                    "label": "duration",
+                    "description": "Slide transition duration in milliseconds."
+                },{
+                    "label": "easing",
+                    "description": "It is like a CSS transition-timing-function — describes acceleration curve."
+                },{
+                    "label": "per-page",
+                    "description":"The number of slides to be shown. It accepts a number  or an object for complex responsive layouts."
+                },{
+                    "label": "undraggable",
+                    "description": "Do not use dragging and touch swiping"
+                },{
+                    "label": "single-drag",
+                    "description": "Disallow dragging to move multiple slides"
+                },{
+                    "label": "threshold",
+                    "description": "Touch and mouse dragging threshold (in px)"
+                },{
+                    "label": "loop",
+                    "description": "Loop the slides around"
+                },{
+                    "label": "selected",
+                    "description": "Index of currently selected slide"
+                },{
+                    "label": "new-selection",
+                    "description": "Jump to new index / page number"
+                }
+            ]
         }
     ]
 }

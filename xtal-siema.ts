@@ -39,9 +39,9 @@ class XtalSiema extends XtallatX(HTMLElement)  {
     }
 
     _easing: string = 'ease-out';
-                /**
-             * It is like a CSS transition-timing-function — describes acceleration curve
-             */
+    /**
+     * It is like a CSS transition-timing-function — describes acceleration curve
+     */
     get easing(){
         return this._easing;
     }
@@ -50,10 +50,10 @@ class XtalSiema extends XtallatX(HTMLElement)  {
     }
     
     _perPage: number = 1;
-                /**
-             * The number of slides to be shown. It accepts a number  or an object 
-             * for complex responsive layouts.
-             */
+    /**
+ * The number of slides to be shown. It accepts a number  or an object 
+ * for complex responsive layouts.
+ */
     get perPage(){
         return this._perPage;
     }
@@ -116,7 +116,10 @@ class XtalSiema extends XtallatX(HTMLElement)  {
         this.attr(loop, val, '');
     }
     
-    _selected: number; 
+    _selected: number;
+    /**
+     * Index of currently selected slide
+     */
     get selected(){
         return this._selected;
     }
