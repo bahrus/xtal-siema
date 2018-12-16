@@ -4,6 +4,7 @@
   "version": "0.0.27",
   "description": "Web component wrapper around the lightweight Siema carousel library",
   "main": "xtal-siema.js",
+  "module": "xtal-siema.js",
   "repository": "https://github.com/bahrus/xtal-siema",
   "author": "bahrus <anderson.bruce.b@gmail.com>",
   "license": "MIT",
