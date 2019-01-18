@@ -39,7 +39,11 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           Edgewise
         </div>
       </xtal-link-preview>
-
+      <xtal-link-preview href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/HTMLModules/explainer.md">
+        <div class="loader" slot="loading">
+          Imagine
+        </div>
+      </xtal-link-preview>
       <div>
         <a href="https://www.chromestatus.com/metrics/feature/timeline/popularity/1689" target="blank">Custom Element
           Usage</a>
@@ -63,12 +67,11 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           Haunted Hooks
         </div>
       </xtal-link-preview>
-
-      <div>
-        <a  href="https://twitter.com/julienrenaux/status/1049212830367539200/photo/1?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1049212830367539200&ref_url=http%3A%2F%2F127.0.0.1%3A8081%2Fdemo%2Findex.html" target="_blank">
-           <img style="height:195px" src="https://pbs.twimg.com/media/Do8B6zrW0AISmNP.jpg">
-          </a>
-      </div>
+      <xtal-link-preview href="https://github.com/luwes/swiss-element">
+        <div class="loader" slot="loading">
+          Swiss Element
+        </div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://www.blazeui.com/">
         <div class="loader" slot="loading">
           Blaze UI
@@ -116,8 +119,14 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           Web Components in Sharepoint
         </div>
       </xtal-link-preview>
+      <xtal-link-preview href="https://blog.ionicframework.com/build-your-next-design-system-with-web-components/">
+        <div class="loader" slot="loading">Ionic Design</div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://boltdesignsystem.com/">
         <div class="loader" slot="loading">Bolt Design System</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://medium.com/@castastrophee/patternfly-elements-how-to-build-a-demo-component-448c32069a21">
+        <div class="loader" slot="loading">Patternfly</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://hacks.mozilla.org/2018/11/the-power-of-web-components/">
         <div class="loader" slot="loading">Power of WCs</div>
@@ -273,6 +282,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
       <xtal-link-preview href="https://github.com/PolymerLabs/amp-viewer/blob/master/amp-viewer.js">
         <div class="loader" slot="loading">Amp Viewer</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/gustafnk/h-include">
+        <div class="loader" slot="loading">h-include</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://twittercommunity.com/t/announcing-twitter-status-and-twitter-user-web-components-for-displaying-tweets-and-users/100433?u=abraham">
         <div class="loader" slot="loading">Twitter components</div>
