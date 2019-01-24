@@ -2,7 +2,7 @@
     "tags": [
         {
             "label": "xtal-siema",
-            "description": "Light-weight wrapper around siemal carousel library",
+            "description": "Light-weight wrapper around siema carousel library",
             "attributes": [
                 {
                     "label": "start-index",
