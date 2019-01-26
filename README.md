@@ -29,9 +29,18 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           Web Component links of interest
         </div>
       </div>
+      <xtal-link-preview href="https://ionicframework.com/docs/components/">
+        <div class="loader"></div>
+        <div class="textDesc" slot="loading">ion-</div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components.html">
         <div class="loader" slot="loading">
           ⚡
+        </div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://vogloblinsky.github.io/web-components-benchmark/">
+        <div class="textDesc">
+          Benchmarks
         </div>
       </xtal-link-preview>
       <xtal-link-preview href="https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/">
@@ -119,6 +128,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           Web Components in Sharepoint
         </div>
       </xtal-link-preview>
+
       <xtal-link-preview href="https://blog.ionicframework.com/build-your-next-design-system-with-web-components/">
         <div class="loader" slot="loading">Ionic Design</div>
       </xtal-link-preview>
@@ -142,6 +152,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>      
       <xtal-link-preview href="https://frontendnews.io/editions/2018-08-15-simple-camera-component">
         <div class="loader" slot="loading">Camera Component</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://mrin9.github.io/RapiDoc/">
+        <div class="loader" slot="loading">https://mrin9.github.io/RapiDoc/</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://medium.com/@lucamezzalira/a-night-experimenting-with-lit-html-585a8c69892a">
         <div class="loader" slot="loading">night-lit</div>
@@ -244,6 +257,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
       <xtal-link-preview href="https://developers.google.com/web/fundamentals/web-components/examples/">
         <div class="loader" slot="loading">Best Practices Examples</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://medium.com/@david.dalbusco/create-a-web-component-to-keep-track-of-your-inputs-draft-with-stenciljs-cd3265d8cc58">
+        <div class="loader" slot="loading">Saving to Draft</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://nervous-stonebraker-1f429b.netlify.com/">
         <div class="loader" slot="loading">Recommmmendations</div>
