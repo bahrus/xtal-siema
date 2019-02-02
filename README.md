@@ -20,7 +20,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <wired-button data-jump="-1">Previous</wired-button>&nbsp;
       <wired-button data-jump="1">Next</wired-button>
     </div>
-    <!-- Pass down ('p-d' how much to jump to the node below) -->
+    <!-- Pass down ('p-d') how much to jump to the node below) -->
     <p-d on="click" if="wired-button" prop="pageJump" val="target.dataset.jump"></p-d>
     
     <xtal-siema attr-for-selected="preview">
@@ -29,6 +29,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           Web Component links of interest
         </div>
       </div>
+
       <xtal-link-preview href="https://ionicframework.com/docs/components/">
         <div class="loader"></div>
         <div class="textDesc" slot="loading">ion-</div>
@@ -85,6 +86,10 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
         <div class="loader" slot="loading">
           Blaze UI
         </div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://www.udemy.com/webcomponents-apps/">
+        <div class="loader"></div>
+        <div class="textDesc" slot="loading">udemy</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://livebook.manning.com/#!/book/web-components-in-action/welcome/v-4/">
         <div class="loader" slot="loading">
@@ -254,6 +259,11 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
       <xtal-link-preview href="https://medium.com/@mikeal/ive-seen-the-future-it-s-full-of-html-2577246f2210">
         <div class="loader" slot="loading">@mikeal</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://open-wc.org/">
+        <div class="loader" slot="loading">
+          Recommendations
+        </div>
       </xtal-link-preview>
       <xtal-link-preview href="https://developers.google.com/web/fundamentals/web-components/examples/">
         <div class="loader" slot="loading">Best Practices Examples</div>
