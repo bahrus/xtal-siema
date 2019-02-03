@@ -20,7 +20,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <wired-button data-jump="-1">Previous</wired-button>&nbsp;
       <wired-button data-jump="1">Next</wired-button>
     </div>
-    <!-- Pass down ('p-d') how much to jump to the node below) -->
+    <!-- Pass down ('p-d' how much to jump to the node below) -->
     <p-d on="click" if="wired-button" prop="pageJump" val="target.dataset.jump"></p-d>
     
     <xtal-siema attr-for-selected="preview">
@@ -65,6 +65,11 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <xtal-link-preview href="https://code.visualstudio.com/updates/v1_30#_html-custom-tags-attributes-support">
         <div class="loader" slot="loading">
           VS Code
+        </div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://scotch.io/bar-talk/an-overview-of-the-most-exciting-proposals-for-the-web-platform-related-to-web-components">
+        <div class="loader" slot="loading">
+          🔮
         </div>
       </xtal-link-preview>
       <xtal-link-preview href="https://opensource.googleblog.com/2018/11/introducing-web-component-and-data-api-for-quick-draw.html">
