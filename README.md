@@ -12,6 +12,10 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
 ```
 <custom-element-demo>
   <template>
+  <div>
+
+    <h3>Basic xtal-siema demo</h3>
+    
     <div>
       <wired-button data-jump="-1">Previous</wired-button>&nbsp;
       <wired-button data-jump="1">Next</wired-button>
