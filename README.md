@@ -514,7 +514,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
 <custom-element-demo>
 <template>
     <div>
-        <wc-info href="https://unpkg.com/xtal-siema@0.0.32/html.json"></wc-info>
+        <wc-info package-name="npm.xtal-siema" href="https://unpkg.com/xtal-siema@0.0.32/html.json"></wc-info>
         
     </div>
 
