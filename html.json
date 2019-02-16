@@ -1,41 +1,42 @@
 {
+    "version": 1,
     "tags": [
         {
-            "label": "xtal-siema",
+            "name": "xtal-siema",
             "description": "Light-weight wrapper around siema carousel library",
             "attributes": [
                 {
-                    "label": "start-index",
+                    "name": "start-index",
                     "description": "Index to start slide show from."
                 },{
-                    "label": "attr-for-selected",
+                    "name": "attr-for-selected",
                     "description": "Specify attribute to set when child element is selected by siema."
                 },{
-                    "label": "duration",
+                    "name": "duration",
                     "description": "Slide transition duration in milliseconds."
                 },{
-                    "label": "easing",
+                    "name": "easing",
                     "description": "It is like a CSS transition-timing-function — describes acceleration curve."
                 },{
-                    "label": "per-page",
+                    "name": "per-page",
                     "description":"The number of slides to be shown. It accepts a number  or an object for complex responsive layouts."
                 },{
-                    "label": "undraggable",
+                    "name": "undraggable",
                     "description": "Do not use dragging and touch swiping"
                 },{
-                    "label": "single-drag",
+                    "name": "single-drag",
                     "description": "Disallow dragging to move multiple slides"
                 },{
-                    "label": "threshold",
+                    "name": "threshold",
                     "description": "Touch and mouse dragging threshold (in px)"
                 },{
-                    "label": "loop",
+                    "name": "loop",
                     "description": "Loop the slides around"
                 },{
-                    "label": "selected",
+                    "name": "selected",
                     "description": "Index of currently selected slide"
                 },{
-                    "label": "new-selection",
+                    "name": "new-selection",
                     "description": "Jump to new index / page number"
                 }
             ]

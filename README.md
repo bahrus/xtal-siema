@@ -12,10 +12,6 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
 ```
 <custom-element-demo>
   <template>
-  <div>
-
-    <h3>Basic xtal-siema demo</h3>
-    
     <div>
       <wired-button data-jump="-1">Previous</wired-button>&nbsp;
       <wired-button data-jump="1">Next</wired-button>
@@ -39,6 +35,7 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           ⚡
         </div>
       </xtal-link-preview>
+
       <xtal-link-preview href="https://vogloblinsky.github.io/web-components-benchmark/">
         <div class="textDesc">
           Benchmarks
@@ -67,9 +64,20 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           VS Code
         </div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://scotch.io/bar-talk/an-overview-of-the-most-exciting-proposals-for-the-web-platform-related-to-web-components">
+      <xtal-link-preview href="https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin">
         <div class="loader" slot="loading">
-          🔮
+          lit-plugin
+        </div>        
+      </xtal-link-preview>
+
+      <xtal-link-preview href="https://marketplace.visualstudio.com/items?itemName=bierner.lit-html">
+        <div class="loader" slot="loading">
+          lit-html
+        </div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://marketplace.visualstudio.com/items?itemName=bierner.comment-tagged-templates">
+        <div class="loader" slot="loading">
+          comment-tagged-templates
         </div>
       </xtal-link-preview>
       <xtal-link-preview href="https://opensource.googleblog.com/2018/11/introducing-web-component-and-data-api-for-quick-draw.html">
@@ -163,6 +171,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <xtal-link-preview href="https://frontendnews.io/editions/2018-08-15-simple-camera-component">
         <div class="loader" slot="loading">Camera Component</div>
       </xtal-link-preview>
+      <xtal-link-preview href="https://dev.to/gugadev/building-an-instagram-stories-component-using-web-components-2gia">
+        <div class="loader" slot="loading">Whatsapp</div>
+      </xtal-link-preview>
       <xtal-link-preview href="https://mrin9.github.io/RapiDoc/">
         <div class="loader" slot="loading">https://mrin9.github.io/RapiDoc/</div>
       </xtal-link-preview>
@@ -186,6 +197,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
       <xtal-link-preview href="https://ni.github.io/design-system/elements/buttons/">
         <div class="loader" slot="loading">Fuse Design Systems</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://lit-element.polymer-project.org/">
+        <div class="loader" slot="loading">🎉🎆🎉</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://stencilcomponents.com/">
         <div class="loader" slot="loading">Stencil Components</div>
@@ -211,6 +225,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
       <xtal-link-preview href="https://github.com/skatejs/skatejs/">
         <div class="loader" slot="loading">SkateJS</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://vuejsdevelopers.com/2018/05/21/vue-js-web-component/">
+        <div class="loader" slot="loading">vue wc</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://www.predix-ui.com/">
         <div class="loader" slot="loading">Predix Components</div>
@@ -276,9 +293,6 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       <xtal-link-preview href="https://medium.com/@david.dalbusco/create-a-web-component-to-keep-track-of-your-inputs-draft-with-stenciljs-cd3265d8cc58">
         <div class="loader" slot="loading">Saving to Draft</div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://nervous-stonebraker-1f429b.netlify.com/">
-        <div class="loader" slot="loading">Recommmmendations</div>
-      </xtal-link-preview>
       <xtal-link-preview href="https://www.w3.org/2001/tag/doc/webcomponents-design-guidelines/">
         <div class="loader" slot="loading">
           W3C Guidance
@@ -316,6 +330,9 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
       </xtal-link-preview>
       <xtal-link-preview href="https://github.com/gustafnk/h-include">
         <div class="loader" slot="loading">h-include</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://matthewphillips.info/programming/decorate-element.html">
+        <div class="loader" slot="loading">decorate-element</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://twittercommunity.com/t/announcing-twitter-status-and-twitter-user-web-components-for-displaying-tweets-and-users/100433?u=abraham">
         <div class="loader" slot="loading">Twitter components</div>
@@ -493,9 +510,28 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
 <custom-element-demo>
 <template>
     <div>
-        <wc-info href="https://unpkg.com/xtal-siema@0.0.26/web-components.json"></wc-info>
-        <script type="module" src="https://unpkg.com/wc-info@0.0.8/wc-info.js?module"></script>
+        <wc-info href="https://unpkg.com/xtal-siema@0.0.32/html.json"></wc-info>
+        
     </div>
+
+        <!-- Use experimental import maps -->
+        <script defer src="https://cdn.jsdelivr.net/npm/es-module-shims@0.2.0/dist/es-module-shims.js"></script>
+        <script type="importmap-shim">
+          {
+            "imports": {
+              "xtal-latx/": "https://cdn.jsdelivr.net/npm/xtal-latx@0.0.88/",
+              "trans-render/": "https://cdn.jsdelivr.net/npm/trans-render@0.0.60/",
+              "hypo-link/": "https://cdn.jsdelivr.net/npm/hypo-link@0.0.8/",
+              "xtal-element/": "https://cdn.jsdelivr.net/npm/xtal-element@0.0.23/",
+              "wc-info/": "https://cdn.jsdelivr.net/npm/wc-info@0.0.28/"
+              
+            }
+          }
+          </script>
+          
+        <script  type="module-shim">
+          import 'wc-info/wc-info.js';
+        </script>
 </template>
 </custom-element-demo>
 ```
