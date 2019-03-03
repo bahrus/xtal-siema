@@ -12,132 +12,149 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
 ```
 <custom-element-demo>
   <template>
-  <div>
-
-    <h3>Basic xtal-siema demo</h3>
-    
     <div>
-      <wired-button data-jump="-1">Previous</wired-button>&nbsp;
-      <wired-button data-jump="1">Next</wired-button>
-    </div>
-    <!-- Pass down ('p-d' how much to jump to the node below) -->
-    <p-d on="click" if="wired-button" prop="pageJump" val="target.dataset.jump"></p-d>
-    
-    <xtal-siema attr-for-selected="preview">
-      <div class="openingSlide">
-        <div class="textDesc">
-          Web Component links of interest
-        </div>
-      </div>
+      <h3>Basic xtal-siema demo</h3>
 
-      <xtal-link-preview href="https://ionicframework.com/docs/components/">
-        <div class="loader"></div>
-        <div class="textDesc" slot="loading">ion-</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components.html">
-        <div class="loader" slot="loading">
-          ⚡
-        </div>
-      </xtal-link-preview>
-
-      <xtal-link-preview href="https://vogloblinsky.github.io/web-components-benchmark/">
-        <div class="textDesc">
-          Benchmarks
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/">
-        <div class="loader" slot="loading">
-          Edgewise
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/HTMLModules/explainer.md">
-        <div class="loader" slot="loading">
-          Imagine
-        </div>
-      </xtal-link-preview>
       <div>
-        <a href="https://www.chromestatus.com/metrics/feature/timeline/popularity/1689" target="blank">Custom Element
-          Usage</a>
+        <wired-button data-jump="-1">Previous</wired-button>&nbsp;
+        <wired-button data-jump="1">Next</wired-button>
       </div>
-      <div>
-        <a href="https://www.chromestatus.com/metrics/feature/timeline/popularity/804" target="blank">Shadow DOM
-          Usage</a>
-      </div>
-      <xtal-link-preview href="https://code.visualstudio.com/updates/v1_30#_html-custom-tags-attributes-support">
-        <div class="loader" slot="loading">
-          VS Code
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin">
-        <div class="loader" slot="loading">
-          lit-plugin
-        </div>        
-      </xtal-link-preview>
+      <!-- Pass down ('p-d' how much to jump to the node below) -->
+      <p-d
+        on="click"
+        if="wired-button"
+        prop="pageJump"
+        val="target.dataset.jump"
+      ></p-d>
 
-      <xtal-link-preview href="https://marketplace.visualstudio.com/items?itemName=bierner.lit-html">
-        <div class="loader" slot="loading">
-          lit-html
+      <xtal-siema attr-for-selected="preview">
+        <div class="openingSlide">
+          <div class="textDesc">
+            Web Component links of interest
+          </div>
         </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://marketplace.visualstudio.com/items?itemName=bierner.comment-tagged-templates">
-        <div class="loader" slot="loading">
-          comment-tagged-templates
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://opensource.googleblog.com/2018/11/introducing-web-component-and-data-api-for-quick-draw.html">
-        <div class="loader" slot="loading">
-          Quick Draw
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/matthewp/haunted">
-        <div class="loader" slot="loading">
-          Haunted Hooks
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/luwes/swiss-element">
-        <div class="loader" slot="loading">
-          Swiss Element
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://www.blazeui.com/">
-        <div class="loader" slot="loading">
-          Blaze UI
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://www.udemy.com/webcomponents-apps/">
-        <div class="loader"></div>
-        <div class="textDesc" slot="loading">udemy</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://livebook.manning.com/#!/book/web-components-in-action/welcome/v-4/">
-        <div class="loader" slot="loading">
-          MEAP
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://leanpub.com/web-component-essentials">
-        <div class="loader" slot="loading">
-          New Book
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://www.pluralsight.com/courses/vanilla-web-components-practical-guide">
-        <div class="loader" slot="loading">
-          PluralSight
-        </div>
-      </xtal-link-preview>
-      <iframe width="600" height="290" src="https://www.youtube.com/embed/CKy8tKMOP4c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <xtal-link-preview href="https://www.sencha.com/blog/sencha-roadmap-update/">
-        <div class="loader" slot="loading">
-          ExtJS 7
-        </div>
-      </xtal-link-preview>
 
-      <xtal-link-preview href="https://blog.nightly.mozilla.org/2018/09/06/developer-tools-support-for-web-components-in-firefox-63/">
+        <!-- Recent Announcements -->
+        <xtal-link-preview
+          href="https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components.html"
+        >
+          <div class="loader" slot="loading">
+            ⚡
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://www.sencha.com/blog/sencha-roadmap-update/"
+        >
+          <div class="loader" slot="loading">
+            ExtJS 7
+          </div>
+        </xtal-link-preview>
+
+        <!--   Enterprise Component Libraries (Definition:  Contains data grid and/or chart components)  -->
+        <xtal-link-preview href="https://vaadin.com/components">
+          <div class="loader" slot="loading">Vaadin Components</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://vaadin.com/directory">
+          <div class="loader" slot="loading">Vaadin Directory</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://ionicframework.com/docs/components/">
+          <div class="loader" slot="loading">ion-</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://demos.wijmo.com/5/WebComponents/AllComponents/AllComponents/"
+        >
+        </xtal-link-preview>
+        <xtal-link-preview href="https://www.ampproject.org/docs/reference/components">
+          <div class="loader" slot="loading">AMP</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://docs.oracle.com/en/middleware/jet/6/develop/working-oracle-jet-web-components.html"
+        >
+          <div class="loader" slot="loading">Oracle Jet</div>
+        </xtal-link-preview>
+
+          <!--  Design Libraries -->
+          <xtal-link-preview
+          href="https://blog.ionicframework.com/build-your-next-design-system-with-web-components/"
+        >
+          <div class="loader" slot="loading">Ionic Design</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://onsen.io">
+          <div class="loader" slot="loading">Onsen UI</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://www.blazeui.com/">
+          <div class="loader" slot="loading">
+            Blaze UI
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://boltdesignsystem.com/">
+          <div class="loader" slot="loading">Bolt Design System</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://medium.com/@castastrophee/patternfly-elements-how-to-build-a-demo-component-448c32069a21"
+        >
+          <div class="loader" slot="loading">Patternfly</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://github.com/material-components/material-components-web-components"
+        >
+          <div class="loader" slot="loading">Material Web Components</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://ni.github.io/design-system/elements/buttons/"
+        >
+          <div class="loader" slot="loading">Fuse Design Systems</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://www.predix-ui.com/">
+          <div class="loader" slot="loading">Predix</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://elix.org/">
+          <div class="loader" slot="loading">elix</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://sap.github.io/ui5-webcomponents/">
+          <div class="loader" slot="loading"></div>
+        </xtal-link-preview>
+
+        <!-- Tooling -->
+        <xtal-link-preview
+          href="https://code.visualstudio.com/updates/v1_30#_html-custom-tags-attributes-support"
+        >
+          <div class="loader" slot="loading">
+            VS Code
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin"
+        >
+          <div class="loader" slot="loading">lit-plugin</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://marketplace.visualstudio.com/items?itemName=bierner.lit-html"
+        >
+          <div class="loader" slot="loading">lit-html</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://marketplace.visualstudio.com/items?itemName=bierner.comment-tagged-templates"
+        >
+          <div class="loader" slot="loading">
+            comment-tagged-templates
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc"
+        >
+          <div class="loader" slot="loading"></div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://open-wc.org/">
+          <div class="loader" slot="loading">
+            Open-WC
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+        href="https://blog.nightly.mozilla.org/2018/09/06/developer-tools-support-for-web-components-in-firefox-63/"
+      >
         <div class="loader" slot="loading">
           Firefox Web Component Debugging
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://www.xoriant.com/blog/big-data-analytics/turbocharge-data-science-workbench.html">
-        <div class="loader" slot="loading">
-          Data Science WCs
         </div>
       </xtal-link-preview>
       <xtal-link-preview href="https://www.npmjs.com/package/@wcfactory/cli">
@@ -145,316 +162,509 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
           WCFactory
         </div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://blog.mastykarz.nl/web-components-sharepoint-framework/">
-        <div class="loader" slot="loading">
-          Web Components in Sharepoint
-        </div>
-      </xtal-link-preview>
 
-      <xtal-link-preview href="https://blog.ionicframework.com/build-your-next-design-system-with-web-components/">
-        <div class="loader" slot="loading">Ionic Design</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://boltdesignsystem.com/">
-        <div class="loader" slot="loading">Bolt Design System</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://medium.com/@castastrophee/patternfly-elements-how-to-build-a-demo-component-448c32069a21">
-        <div class="loader" slot="loading">Patternfly</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://hacks.mozilla.org/2018/11/the-power-of-web-components/">
+
+        <!-- Browser Related -->
+        <xtal-link-preview
+          href="https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/"
+        >
+          <div class="loader" slot="loading">
+            Edgewise
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/HTMLModules/explainer.md"
+        >
+          <div class="loader" slot="loading">
+            Imagine
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+        href="https://hacks.mozilla.org/2018/11/the-power-of-web-components/"
+      >
         <div class="loader" slot="loading">Power of WCs</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://medium.com/stencil-tricks/a-practical-introduction-to-styling-a-shadow-dom-and-slots-879565a2f423">
-        <div class="loader" slot="loading">Styling Shadow DOM</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://deckdeckgo.com/">
-        <div class="loader" slot="loading">Deck Deck Go</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/Heydon/bruck">
-        <div class="loader" slot="loading">Lo-fi prototyping</div>
-      </xtal-link-preview>      
-      <xtal-link-preview href="https://frontendnews.io/editions/2018-08-15-simple-camera-component">
-        <div class="loader" slot="loading">Camera Component</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://dev.to/gugadev/building-an-instagram-stories-component-using-web-components-2gia">
-        <div class="loader" slot="loading">Whatsapp</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://mrin9.github.io/RapiDoc/">
-        <div class="loader" slot="loading">https://mrin9.github.io/RapiDoc/</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://medium.com/@lucamezzalira/a-night-experimenting-with-lit-html-585a8c69892a">
-        <div class="loader" slot="loading">night-lit</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/TeamHive/stencil-shimmer">
-        <div class="loader" slot="loading">Stencil Shimmer</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/css-doodle/css-doodle">
-        <div class="loader" slot="loading">CSS Doodle</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://vaadin.com/directory">
-        <div class="loader" slot="loading">Vaadin Directory</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/RHelements">
-        <div class="loader" slot="loading">RHElements</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/material-components/material-components-web-components">
-        <div class="loader" slot="loading">Material Web Components</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://ni.github.io/design-system/elements/buttons/">
-        <div class="loader" slot="loading">Fuse Design Systems</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://lit-element.polymer-project.org/">
-        <div class="loader" slot="loading">🎉🎆🎉</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://stencilcomponents.com/">
-        <div class="loader" slot="loading">Stencil Components</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://bendyworks.com/blog/build-a-web-component-with-nutmeg">
-        <div class="loader" slot="loading">
-          Nutmeg
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://dev.to/bennypowers/lets-build-web-components-part-6-gluon-27ll">
-        <div class="loader" slot="loading">
-          Gluon
-        </div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/WebReflection/hyperHTML-Element">
-        <div class="loader" slot="loading">HyperHTML Element</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/UpperCod/Atomico">
-        <div class="loader" slot="loading">Atomico</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/slimjs">
-        <div class="loader" slot="loading">SlimJS</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/skatejs/skatejs/">
-        <div class="loader" slot="loading">SkateJS</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://vuejsdevelopers.com/2018/05/21/vue-js-web-component/">
-        <div class="loader" slot="loading">vue wc</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://www.predix-ui.com/">
-        <div class="loader" slot="loading">Predix Components</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/Tencent/omi/tree/master/packages/omi-chart">
-        <div class="loader" slot="loading">Omi Charts</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://ciampo.github.io/macro-carousel/demo/">
-        <div class="loader" slot="loading">macro-carousel</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://medium.com/@valdrinkoshi/performant-expand-collapse-animations-93d99e80f7f">
-        <div class="loader" slot="loading">Expand/Collapse Animations</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/splitinfinities/lottie-wc">
-        <div class="loader" slot="loading">Lottie Animations</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://onsen.io">
-        <div class="loader" slot="loading">Onsen UI</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://blogs.oracle.com/developers/announcing-oracle-jet-40-and-web-components">
-        <div class="loader" slot="loading">Oracle Jet</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://www.ampproject.org">
-        <div class="loader" slot="loading">AMP</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/theonion/bulbs-elements">
-        <div class="loader" slot="loading">America's Finest News Source</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://elix.org/">
-        <div class="loader" slot="loading">elix</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/skatejs/sk-router">
-        <div class="loader" slot="loading">SkateJS Router</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="http://blog.htmltreegrid.com/post/Best-WebComponents-DataGrid-DataTable.aspx">
-        <div class="loader" slot="loading">HTML Treegrid</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://www.predix-ui.com/">
-        <div class="loader" slot="loading">Predix</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/x-tag">
-        <div class="loader" slot="loading">x-tag</div>
       </xtal-link-preview>
       <xtal-link-preview href="https://bgrins.github.io/xbl-analysis/">
         <div class="loader" slot="loading">
           XBL => CE
         </div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/Polymer/lit-html/tree/master/demo">
-        <div class="loader" slot="loading">lit-html</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://medium.com/@mikeal/ive-seen-the-future-it-s-full-of-html-2577246f2210">
-        <div class="loader" slot="loading">@mikeal</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://open-wc.org/">
+      <xtal-link-preview href="https://developers.google.com/web/updates/2019/02/constructable-stylesheets">
         <div class="loader" slot="loading">
-          Recommendations
+          CSS()
         </div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://developers.google.com/web/fundamentals/web-components/examples/">
+        <!-- Stats -->
+        <div>
+          <a
+            href="https://www.chromestatus.com/metrics/feature/timeline/popularity/1689"
+            target="blank"
+            >Custom Element Usage</a
+          >
+        </div>
+        <div>
+          <a
+            href="https://www.chromestatus.com/metrics/feature/timeline/popularity/804"
+            target="blank"
+            >Shadow DOM Usage</a
+          >
+        </div>
+
+
+
+        <!-- Training -->
+        <xtal-link-preview
+        href="https://developers.google.com/web/fundamentals/web-components/examples/"
+      >
         <div class="loader" slot="loading">Best Practices Examples</div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://medium.com/@david.dalbusco/create-a-web-component-to-keep-track-of-your-inputs-draft-with-stenciljs-cd3265d8cc58">
-        <div class="loader" slot="loading">Saving to Draft</div>
+        <xtal-link-preview href="https://www.udemy.com/webcomponents-apps/">
+          <div class="loader"></div>
+          <div class="textDesc" slot="loading">udemy</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://livebook.manning.com/#!/book/web-components-in-action/welcome/v-4/"
+        >
+          <div class="loader" slot="loading">
+            MEAP
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://leanpub.com/web-component-essentials">
+          <div class="loader" slot="loading">
+            New Book
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://www.pluralsight.com/courses/vanilla-web-components-practical-guide"
+        >
+          <div class="loader" slot="loading">
+            PluralSight
+          </div>
+        </xtal-link-preview>
+        <iframe
+          width="600"
+          height="290"
+          src="https://www.youtube.com/embed/CKy8tKMOP4c"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <xtal-link-preview
+        href="https://medium.com/stencil-tricks/a-practical-introduction-to-styling-a-shadow-dom-and-slots-879565a2f423"
+      >
+        <div class="loader" slot="loading">Styling Shadow DOM</div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://www.w3.org/2001/tag/doc/webcomponents-design-guidelines/">
+        <xtal-link-preview
+          href="https://www.youtube.com/results?search_query=salesforce+lightning"
+        >
+          <div class="loader" slot="loading">
+            Salesforce Vids
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://medium.com/samsung-internet-dev/making-a-simple-gamepad-web-component-23b2ac262f56"
+        >
+          <div class="loader" slot="loading">Gamepad Web Component</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://www.w3.org/2001/tag/doc/webcomponents-design-guidelines/"
+        >
+          <div class="loader" slot="loading">
+            W3C Guidance
+          </div>
+        </xtal-link-preview>
+
+
+
+
+
+
+        <!-- Web Component Generator Libraries-->
+        <xtal-link-preview href="https://polymer-library.polymer-project.org/">
+          <div class="loader" slot="loading>">Pioneers</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/RHelements">
+          <div class="loader" slot="loading">RHElements</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://lit-element.polymer-project.org/">
+          <div class="loader" slot="loading">🎉🎆🎉</div>
+        </xtal-link-preview>
+
+        <xtal-link-preview
+          href="https://bendyworks.com/blog/build-a-web-component-with-nutmeg"
+        >
+          <div class="loader" slot="loading">
+            Nutmeg
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://dev.to/bennypowers/lets-build-web-components-part-6-gluon-27ll"
+        >
+          <div class="loader" slot="loading">
+            Gluon
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://github.com/WebReflection/hyperHTML-Element"
+        >
+          <div class="loader" slot="loading">HyperHTML Element</div>
+        </xtal-link-preview>
+
+        <xtal-link-preview href="https://github.com/matthewp/haunted">
+          <div class="loader" slot="loading">
+            Haunted Hooks
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/luwes/swiss-element">
+          <div class="loader" slot="loading">
+            Swiss Element
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/UpperCod/Atomico">
+          <div class="loader" slot="loading">Atomico</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/slimjs">
+          <div class="loader" slot="loading">SlimJS</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/skatejs/skatejs/">
+          <div class="loader" slot="loading">SkateJS</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/x-tag">
+          <div class="loader" slot="loading">x-tag</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://vuejsdevelopers.com/2018/05/21/vue-js-web-component/"
+        >
+          <div class="loader" slot="loading">vue wc</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://matthewphillips.info/programming/decorate-element.html"
+        >
+          <div class="loader" slot="loading">decorate-element</div>
+        </xtal-link-preview>
+
+
+
+
+
+
+
+
+
+
+        <!-- Thoughtful articles-->
+        <xtal-link-preview
+          href="https://medium.com/@mikeal/ive-seen-the-future-it-s-full-of-html-2577246f2210"
+        >
+          <div class="loader" slot="loading">@mikeal</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+        href="https://blog.mastykarz.nl/web-components-sharepoint-framework/"
+      >
         <div class="loader" slot="loading">
-          W3C Guidance
+          Web Components in Sharepoint
         </div>
-      </xtal-link-preview>      
-      <xtal-link-preview href="https://github.com/Comcast/polaris">
-        <div class="loader" slot="loading">Polaris</div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/QuinntyneBrown/ce-carousel">
-        <div class="loader" slot="loading">cd-carousel</div>
+        <xtal-link-preview
+        href="https://medium.com/@lucamezzalira/a-night-experimenting-with-lit-html-585a8c69892a"
+      >
+        <div class="loader" slot="loading">night-lit</div>
       </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/Fdom92/stencil-fetch">
-        <div class="loader" slot="loading">Stencil fetch</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/Fdom92/stencil-payment">
-        <div class="loader" slot="loading">Stencil Payment</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/mappmechanic/awesome-stenciljs">
-        <div class="loader" slot="loading">Awesome Stencil</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/Fdom92/stencil-voice2text">
-        <div class="loader" slot="loading">Stencil Voice2Text</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://stackblitz.com/edit/angular-ce-poc-material-v2">
-        <div class="loader" slot="loading">Angular material elements</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/tanepiper/mm-components">
-        <div class="loader" slot="loading">Music Markup components</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://aframe.io/">
-        <div class="loader" slot="loading">A-frame Web VR</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/PolymerLabs/amp-viewer/blob/master/amp-viewer.js">
-        <div class="loader" slot="loading">Amp Viewer</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/gustafnk/h-include">
-        <div class="loader" slot="loading">h-include</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://matthewphillips.info/programming/decorate-element.html">
-        <div class="loader" slot="loading">decorate-element</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://twittercommunity.com/t/announcing-twitter-status-and-twitter-user-web-components-for-displaying-tweets-and-users/100433?u=abraham">
-        <div class="loader" slot="loading">Twitter components</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://jpmorganchase.github.io/perspective/">
-        <div class="loader" slot="loading">JPMorgan Chase Perspecitve</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/dabeng/OrgChart-Webcomponents">
-        <div class="loader" slot="loading">Org Charts</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/dsolimando/hnpwa-mobileelements/tree/pagination/www/lib">
-        <div class="loader" slot="loading">HNPWA Mobile Elements</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/lamplightdev/compost-hn">
-        <div class="loader" slot="loading">Compost Elements</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://github.com/alexnoz/vanilla-wc-hnpwa">
-        <div class="loader" slot="loading">Vannilla WC PWA</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="http://handsontable.github.io/hot-table/">
-        <div class="loader" slot="loading">Polymer Element wrapper for Handsontable</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://medium.com/samsung-internet-dev/making-a-simple-gamepad-web-component-23b2ac262f56">
-        <div class="loader" slot="loading">Gamepad Web Component</div>
-      </xtal-link-preview>
-      <xtal-link-preview href="https://micro-frontends.org/">
-        <div class="loader" slot="loading">Micro Frontend</div>
-      </xtal-link-preview>
-    </xtal-siema>
-    <!-- pass the url and title from the fetch to the hyperlink after completing the fetch -->
-    <p-d on="fetch-complete-changed" to="a" prop="href" val="target.href" skip-init m="1"></p-d>
-    <p-d on="fetch-complete-changed" to="a" prop="innerText" val="target.title" skip-init m="1"></p-d>
-    <!-- watch for twitter slides -->
-    <css-observe data-xlp="no" id="twitterObserver" observe selector="div[preview]>twitter-widget" ></css-observe>
-    <!-- If a twitter widget is opened, hide the link -->
-    <p-d-x on="latest-match-changed" to="a" prop="dataset.xlp" val="target.dataset.xlp" m="1" skip-init></p-d-x>
-    <!-- Watch for simple hyperlink slides -->
-    <css-observe data-xlp="no" id="aObserver" observe selector="div[preview]>a" ></css-observe>
-    <!-- If a simple hyperlink slide is opened, hide the bottom hyperlink -->
-    <p-d-x on="latest-match-changed" to="a" prop="dataset.xlp" val="target.dataset.xlp" m="1" skip-init></p-d-x>
-    <!-- If an iframe is opened, hide the bottom hyperlink-->
-    <css-observe data-xlp="no" id="iframeObserver" observe selector="iframe[preview]" ></css-observe>
-    <p-d-x on="latest-match-changed" to="a" prop="dataset.xlp" val="target.dataset.xlp" m="1" skip-init></p-d-x>
-    <!-- Watch for link preview slides -->
-    <css-observe data-xlp="yes" id="xlpObserver" observe selector="xtal-link-preview[preview]" ></css-observe>
-    <!-- If a link preview slide is opened, show the hyperlink -->
-    <p-d-x on="latest-match-changed" to="a" prop="dataset.xlp" val="target.dataset.xlp" m="1" skip-init></p-d-x>
-    <a class="preview-link" target="_blank">link</a>
-
-    <style>
-      a[data-xlp="no"]{
-        display:none;
-      }
-
-      xtal-siema{
-        max-width: 600px;
-        width:100%;
-      }
-      xtal-siema div{
-        height:99%;
-      }
-      xtal-link-preview:not([fetch-complete]) {
-        display: none;
-      }
-
-      a:not([href]) {
-        display: none;
-      }
-      a[preview-link]{
-        display:block;
-        margin-top:30px;
-      }
-
-      xtal-link-preview,
-      .openingSlide {
-        display:flex;
-        flex-direction: column;
-        text-align: center;
-        height:100%;
-      }
+        <xtal-link-preview href="https://micro-frontends.org/">
+          <div class="loader" slot="loading">Micro Frontend</div>
+        </xtal-link-preview>
+        
+        <xtal-link-preview
+          href="https://dev.to/gugadev/building-an-instagram-stories-component-using-web-components-2gia"
+        >
+          <div class="loader" slot="loading">Whatsapp</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://medium.com/@david.dalbusco/create-a-web-component-to-keep-track-of-your-inputs-draft-with-stenciljs-cd3265d8cc58"
+        >
+          <div class="loader" slot="loading">Saving to Draft</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://github.com/mappmechanic/awesome-stenciljs"
+        >
+          <div class="loader" slot="loading">Awesome Stencil</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://github.com/web-padawan/awesome-lit-html"
+        >
+          <div class="loader slot="loading>Awesome lit-html</div>
+        </xtal-link-preview>
 
 
 
+        <xtal-link-preview href="https://github.com/Fdom92/stencil-voice2text">
+          <div class="loader" slot="loading">Stencil Voice2Text</div>
+        </xtal-link-preview>
 
+        <!-- Special Interest Web Components -->
+        <xtal-link-preview href="https://github.com/tanepiper/mm-components">
+          <div class="loader" slot="loading">Music Markup components</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://aframe.io/">
+          <div class="loader" slot="loading">A-frame Web VR</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/gustafnk/h-include">
+          <div class="loader" slot="loading">h-include</div>
+        </xtal-link-preview>
 
+        <xtal-link-preview href="https://github.com/Comcast/polaris">
+          <div class="loader" slot="loading">Polaris</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://jpmorganchase.github.io/perspective/">
+          <div class="loader" slot="loading">JPMorgan Chase Perspecitve</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+        href="https://www.xoriant.com/blog/big-data-analytics/turbocharge-data-science-workbench.html"
+      >
+        <div class="loader" slot="loading">
+          Data Science WCs
+        </div>
+      </xtal-link-preview>        
+      <xtal-link-preview href="https://deckdeckgo.com/">
+        <div class="loader" slot="loading">Deck Deck Go</div>
+      </xtal-link-preview>
+      <xtal-link-preview href="https://github.com/Heydon/bruck">
+        <div class="loader" slot="loading">Lo-fi prototyping</div>
+      </xtal-link-preview>
+      <xtal-link-preview
+        href="https://frontendnews.io/editions/2018-08-15-simple-camera-component"
+      >
+        <div class="loader" slot="loading">Camera Component</div>
+      </xtal-link-preview>
+      <!-- Performance -->
+        <xtal-link-preview
+          href="https://vogloblinsky.github.io/web-components-benchmark/"
+        >
+          <div class="textDesc">
+            Benchmarks
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://github.com/dsolimando/hnpwa-mobileelements/tree/pagination/www/lib"
+        >
+          <div class="loader" slot="loading">HNPWA Mobile Elements</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/lamplightdev/compost-hn">
+          <div class="loader" slot="loading">Compost Elements</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/alexnoz/vanilla-wc-hnpwa">
+          <div class="loader" slot="loading">Vannilla WC PWA</div>
+        </xtal-link-preview>
 
-      @media (min-width: 800px) {
-        xtal-siema{
-          height: 200px;
+        <!-- Misc Web components not found on webcomponents.org-->
+        <xtal-link-preview href="https://github.com/TeamHive/stencil-shimmer">
+          <div class="loader" slot="loading">Stencil Shimmer</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/css-doodle/css-doodle">
+          <div class="loader" slot="loading">CSS Doodle</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://opensource.googleblog.com/2018/11/introducing-web-component-and-data-api-for-quick-draw.html"
+        >
+          <div class="loader" slot="loading">
+            Quick Draw
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://mrin9.github.io/RapiDoc/">
+          <div class="loader" slot="loading">
+            RapiDoc
+          </div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://github.com/Tencent/omi/tree/master/packages/omi-chart"
+        >
+          <div class="loader" slot="loading">Omi Charts</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://ciampo.github.io/macro-carousel/demo/">
+          <div class="loader" slot="loading">macro-carousel</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://medium.com/@valdrinkoshi/performant-expand-collapse-animations-93d99e80f7f"
+        >
+          <div class="loader" slot="loading">Expand/Collapse Animations</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="https://github.com/splitinfinities/lottie-wc">
+          <div class="loader" slot="loading">Lottie Animations</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="https://github.com/PolymerLabs/amp-viewer/blob/master/amp-viewer.js"
+        >
+          <div class="loader" slot="loading">Amp Viewer</div>
+        </xtal-link-preview>
+        <xtal-link-preview
+          href="http://blog.htmltreegrid.com/post/Best-WebComponents-DataGrid-DataTable.aspx"
+        >
+          <div class="loader" slot="loading">Treegrid</div>
+        </xtal-link-preview>
+        <xtal-link-preview href="http://handsontable.github.io/hot-table/">
+          <div class="loader" slot="loading">Polymer Element wrapper for Handsontable</div>
+        </xtal-link-preview>
+      <xtal-link-preview
+      href="https://github.com/dabeng/OrgChart-Webcomponents"
+    >
+      <div class="loader" slot="loading">Org Charts</div>
+    </xtal-link-preview>
+
+    <xtal-link-preview href="https://github.com/QuinntyneBrown/ce-carousel">
+      <div class="loader" slot="loading">cd-carousel</div>
+    </xtal-link-preview>
+    <xtal-link-preview href="https://github.com/Fdom92/stencil-fetch">
+      <div class="loader" slot="loading">Stencil fetch</div>
+    </xtal-link-preview>
+    <xtal-link-preview href="https://github.com/Fdom92/stencil-payment">
+      <div class="loader" slot="loading">Stencil Payment</div>
+    </xtal-link-preview>
+    <xtal-link-preview href="https://github.com/skatejs/sk-router">
+      <div class="loader" slot="loading">SkateJS Router</div>
+    </xtal-link-preview>
+    <xtal-link-preview href="https://github.com/theonion/bulbs-elements">
+      <div class="loader" slot="loading">America's Finest News Source</div>
+    </xtal-link-preview>
+
+      </xtal-siema>
+      <!-- pass the url and title from the fetch to the hyperlink after completing the fetch -->
+      <p-d
+        on="fetch-complete-changed"
+        to="a"
+        prop="href"
+        val="target.href"
+        skip-init
+        m="1"
+      ></p-d>
+      <p-d
+        on="fetch-complete-changed"
+        to="a"
+        prop="innerText"
+        val="target.title"
+        skip-init
+        m="1"
+      ></p-d>
+      <!-- watch for twitter slides -->
+      <css-observe
+        data-xlp="no"
+        id="twitterObserver"
+        observe
+        selector="div[preview]>twitter-widget"
+      ></css-observe>
+      <!-- If a twitter widget is opened, hide the link -->
+      <p-d-x
+        on="latest-match-changed"
+        to="a"
+        prop="dataset.xlp"
+        val="target.dataset.xlp"
+        m="1"
+        skip-init
+      ></p-d-x>
+      <!-- Watch for simple hyperlink slides -->
+      <css-observe
+        data-xlp="no"
+        id="aObserver"
+        observe
+        selector="div[preview]>a"
+      ></css-observe>
+      <!-- If a simple hyperlink slide is opened, hide the bottom hyperlink -->
+      <p-d-x
+        on="latest-match-changed"
+        to="a"
+        prop="dataset.xlp"
+        val="target.dataset.xlp"
+        m="1"
+        skip-init
+      ></p-d-x>
+      <!-- If an iframe is opened, hide the bottom hyperlink-->
+      <css-observe
+        data-xlp="no"
+        id="iframeObserver"
+        observe
+        selector="iframe[preview]"
+      ></css-observe>
+      <p-d-x
+        on="latest-match-changed"
+        to="a"
+        prop="dataset.xlp"
+        val="target.dataset.xlp"
+        m="1"
+        skip-init
+      ></p-d-x>
+      <!-- Watch for link preview slides -->
+      <css-observe
+        data-xlp="yes"
+        id="xlpObserver"
+        observe
+        selector="xtal-link-preview[preview]"
+      ></css-observe>
+      <!-- If a link preview slide is opened, show the hyperlink -->
+      <p-d-x
+        on="latest-match-changed"
+        to="a"
+        prop="dataset.xlp"
+        val="target.dataset.xlp"
+        m="1"
+        skip-init
+      ></p-d-x>
+      <a class="preview-link" target="_blank">link</a>
+
+      <style>
+        a[data-xlp="no"] {
+          display: none;
         }
 
-        
-      }
-
-      @media (max-width: 800px) {
-
-        xtal-siema{
-          height: 300px;
+        xtal-siema {
+          max-width: 600px;
+          width: 100%;
+        }
+        xtal-siema div {
+          height: 99%;
+        }
+        xtal-link-preview:not([fetch-complete]) {
+          display: none;
         }
 
-        
-      }
+        a:not([href]) {
+          display: none;
+        }
+        a[preview-link] {
+          display: block;
+          margin-top: 30px;
+        }
 
+        xtal-link-preview,
+        .openingSlide {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          height: 100%;
+        }
 
+        @media (min-width: 800px) {
+          xtal-siema {
+            height: 200px;
+          }
+        }
 
+        @media (max-width: 800px) {
+          xtal-siema {
+            height: 300px;
+          }
+        }
 
-      /* Add some padding inside the card container */
-      .container {
-        padding: 2px 16px;
-      }
+        /* Add some padding inside the card container */
+        .container {
+          padding: 2px 16px;
+        }
 
-      .textDesc {
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-      }
+        .textDesc {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
 
-      /* .loader {
+        /* .loader {
         display:flex;
         position: relative;
         top: calc(50% - 40px);
@@ -465,43 +675,62 @@ In the demo below, drag with your mouse / finger.  Or use next / previous button
         height: 40px;
         animation: spin 2s linear infinite;
       } */
-      .loader{
-        width: 40px;
-        height: 40px;
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        animation: spin 2s linear infinite;
-      }
+        .loader {
+          width: 40px;
+          height: 40px;
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          animation: spin 2s linear infinite;
+        }
 
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
         }
-        100% {
-          transform: rotate(360deg);
+        div[preview] {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
         }
-      }
-      div[preview]{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-      }
-      xtal-siema:not([data-selected-changed]) {
-        display:none;
-      }
-      details{
-        overflow: hidden;
-      }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/xtal-siema@0.0.24/xtal-siema.iife.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/wired-elements@0.8.2/dist/wired-elements.bundled.min.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/xtal-link-preview@0.0.38/dist/xtal-link-preview.iife.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/p-d.p-u@0.0.91/dist/p-all.iife.js"></script>
-    <script type="module" src="https://unpkg.com/css-observe@0.0.8/dist/css-observe.iife.js"></script>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
+        xtal-siema:not([data-selected-changed]) {
+          display: none;
+        }
+        details {
+          overflow: hidden;
+        }
+      </style>
+      <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+      <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/xtal-siema@0.0.24/xtal-siema.iife.js"
+      ></script>
+      <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/wired-elements@0.8.2/dist/wired-elements.bundled.min.js"
+      ></script>
+      <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/xtal-link-preview@0.0.38/dist/xtal-link-preview.iife.js"
+      ></script>
+      <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/p-d.p-u@0.0.91/dist/p-all.iife.js"
+      ></script>
+      <script
+        type="module"
+        src="https://unpkg.com/css-observe@0.0.8/dist/css-observe.iife.js"
+      ></script>
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"
+      ></script>
+    </div>
     </template>
 </custom-element-demo>
 ```
