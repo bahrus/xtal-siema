@@ -21,7 +21,7 @@ const new_selection = 'new-selection';
  * @demo demo/index.html
  */
 class XtalSiema extends XtallatX(HTMLElement)  {
-    _siemaInstance;
+    _siemaInstance!: any;
     get SiemaInstance() {
         return this._siemaInstance;
     }
@@ -104,11 +104,11 @@ class XtalSiema extends XtallatX(HTMLElement)  {
         this.attr(threshold, val.toString());
     }
 
-    _loop: boolean;
+    _loop = false
     
-            /**
-             * Loop the slides around
-             */
+    /**
+     * Loop the slides around
+     */
     get loop(){
         return this._loop;
     }
@@ -116,7 +116,7 @@ class XtalSiema extends XtallatX(HTMLElement)  {
         this.attr(loop, val, '');
     }
     
-    _selected: number;
+    _selected!: number;
     /**
      * Index of currently selected slide
      */
@@ -131,7 +131,7 @@ class XtalSiema extends XtallatX(HTMLElement)  {
         this.attr(selected, val.toString());
     }
     
-    _attrForSelected: string;
+    _attrForSelected!: string;
     get attrForSelected(){
         return this._attrForSelected;
     }
@@ -152,7 +152,7 @@ class XtalSiema extends XtallatX(HTMLElement)  {
     static get observedAttributes(){
         return super.observedAttributes.concat([duration, easing, per_page, start_index, undraggable, single_drag, threshold, loop, attr_for_selected, new_selection]);
     }
-    snakeToCamel(s) {
+    snakeToCamel(s: string) {
         return s.replace(/(\-\w)/g, function (m) { return m[1].toUpperCase(); });
     }
     attributeChangedCallback(name: string, oldVal: string, newVal: string){
@@ -164,23 +164,23 @@ class XtalSiema extends XtallatX(HTMLElement)  {
             case duration:
             case start_index:
             case threshold:
-                this[unme] = parseFloat(newVal);
+                (<any>this)[unme] = parseFloat(newVal);
                 break;
             case easing:
             case attr_for_selected:
-                this[unme] = newVal;
+                (<any>this)[unme] = newVal;
                 break;
             case undraggable:
             case single_drag:
             case loop:
-                this[unme] = newVal !== null;
+                (<any>this)[unme] = newVal !== null;
                 break;
             case new_selection:
-                this[unme] = parseFloat(newVal);
+                (<any>this)[unme] = parseFloat(newVal);
                 action = 'onNewSelection'
                 break;
         }
-        this[action]();
+        (<any>this)[action]();
     }
 
 
@@ -211,7 +211,7 @@ class XtalSiema extends XtallatX(HTMLElement)  {
         this.invokeResizeHack();
         //this['_setSelected'](this.newSelection);
     }
-    set pageJump(val){
+    set pageJump(val: number | string){
         const inc = typeof(val) === 'number' ? val : parseInt(val);
         this.newSelection = this.selected + inc;
     }
@@ -222,7 +222,7 @@ class XtalSiema extends XtallatX(HTMLElement)  {
     }
     handleChange() {
         if (!this._siemaInstance) return;
-        const childNodes = this.querySelector('div').childNodes;
+        const childNodes = this.querySelector('div')!.childNodes;
         if (this.attrForSelected && childNodes && childNodes.length > this.selected) {
             const leafNode = childNodes[this.selected].firstChild as HTMLElement;
             if(leafNode) leafNode.removeAttribute(this.attrForSelected);

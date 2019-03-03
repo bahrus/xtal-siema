@@ -1,6 +1,6 @@
 import Siema from './siema.js';
-import { XtallatX } from 'xtal-latx/xtal-latx.js';
-import { define } from 'xtal-latx/define.js';
+import { XtallatX } from 'xtal-element/xtal-latx.js';
+import { define } from 'xtal-element/define.js';
 const duration = 'duration';
 const easing = 'easing';
 const per_page = 'per-page';
@@ -30,6 +30,7 @@ class XtalSiema extends XtallatX(HTMLElement) {
         this._undraggable = false;
         this._singleDrag = false;
         this._threshold = 20;
+        this._loop = false;
         this._newSelection = -1;
         this._connected = false;
     }
@@ -234,4 +235,3 @@ class XtalSiema extends XtallatX(HTMLElement) {
     }
 }
 define(XtalSiema);
-//# sourceMappingURL=xtal-siema.js.map
