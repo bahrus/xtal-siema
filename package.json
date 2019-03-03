@@ -1,7 +1,7 @@
 {
   "name": "xtal-siema",
   "flat": true,
-  "version": "0.0.34",
+  "version": "0.0.35",
   "description": "Web component wrapper around the lightweight Siema carousel library",
   "main": "xtal-siema.js",
   "module": "xtal-siema.js",
