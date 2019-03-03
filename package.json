@@ -10,11 +10,11 @@
   "license": "MIT",
   "dependencies": {
     "siema": "1.5.1",
-    "xtal-latx": "0.0.76"
+    "xtal-element": "0.0.29"
   },
   "devDependencies": {
-    "@webcomponents/webcomponentsjs": "^2.0.0",
-    "jiife": "^0.0.8"
+    "@webcomponents/webcomponentsjs": "2.2.7",
+    "jiife": "0.0.12"
   },
   "resolutions": {
     "type-detect": "0.1.1",
