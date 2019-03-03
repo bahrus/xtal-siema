@@ -2,6 +2,8 @@
 
 <a href="https://nodei.co/npm/xtal-siema/"><img src="https://nodei.co/npm/xtal-siema.png"></a>
 
+<img src="https://badgen.net/bundlephobia/minzip/xtal-siema">
+
 # \<xtal-siema\>
 
 Web component wrapper around the lightweight (3kb minified/gzipped) [Siema carousel library](https://pawelgrzybek.github.io/siema/).
