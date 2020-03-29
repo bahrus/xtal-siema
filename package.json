@@ -9,14 +9,11 @@
   "author": "bahrus <anderson.bruce.b@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/siema": "^1.4.3",
+    "@types/siema": "^1.4.4",
     "siema": "1.5.1",
-    "xtal-element": "0.0.29"
+    "xtal-element": "0.0.101"
   },
-  "devDependencies": {
-    "@webcomponents/webcomponentsjs": "2.2.7",
-    "jiife": "0.0.12"
-  },
+  "devDependencies": {},
   "resolutions": {
     "type-detect": "0.1.1",
     "supports-color": "3.1.2",
