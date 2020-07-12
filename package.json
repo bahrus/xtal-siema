@@ -11,12 +11,14 @@
   "dependencies": {
     "@types/siema": "^1.4.4",
     "siema": "1.5.1",
-    "xtal-element": "0.0.101"
+    "xtal-element": "0.0.231"
   },
-  "devDependencies": {},
-  "resolutions": {
-    "type-detect": "0.1.1",
-    "supports-color": "3.1.2",
-    "samsam": "1.1.3"
+  "devDependencies": {
+    "es-dev-server": "1.56.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node node_modules/xtal-test/serve.js",
+    "start": "es-dev-server --app-index demo/dev.html --node-resolve --watch --open"
   }
 }
