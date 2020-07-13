@@ -1,6 +1,6 @@
 import { Siema } from './siema.js';
 import { XtallatX, define, hydrate } from 'xtal-element/xtal-latx.js';
-const linkSiemaInstance = ({ self, undraggable, duration, easing, loop, singleDrag, perPage, startIndex, threshold, handleChange }) => {
+const linkSiemaInstance = ({ self, undraggable, duration, easing, loop, singleDrag, perPage, startIndex, threshold }) => {
     console.log('inLinkiemaInstance');
     self.style.display = 'block';
     self.siemaInstance = new Siema({
