@@ -196,8 +196,7 @@
       </xtal-link-preview>
     </xtal-siema>
     <p-d on=view-model-changed to=[-href] val=target.href></p-d>
-    <!-- <p-d on="fetch-complete-changed" to="{href:target.href;innerText:target.title}" skip-init></p-d>
-    <p-d on="fetch-complete-changed" to= -->
+    <p-d on=view-model-changed to=[-innerText] val=target.title></p-d>
     <a -href -innerText target="_blank">link</a>
 
     <style>

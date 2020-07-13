@@ -2,6 +2,7 @@ import { Siema } from './siema.js';
 import { XtallatX, define, hydrate } from 'xtal-element/xtal-latx.js';
 const linkSiemaInstance = ({ self, undraggable, duration, easing, loop, singleDrag, perPage, startIndex, threshold, handleChange }) => {
     console.log('inLinkiemaInstance');
+    self.style.display = 'block';
     self.siemaInstance = new Siema({
         selector: self,
         draggable: !undraggable,
@@ -69,7 +70,8 @@ XtalSiema.attributeProps = ({ selected, siemaInstance, duration, easing, perPage
     obj: [siemaInstance],
     num: [duration, perPage, startIndex, threshold, newSelection, selected],
     notify: [selected],
-    str: [easing, attrForSelected]
+    str: [easing, attrForSelected],
+    reflect: [selected, newSelection]
 });
 XtalSiema.defaultValues = {
     duration: 200,
