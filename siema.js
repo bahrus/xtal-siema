@@ -141,7 +141,7 @@ export  class Siema {
       this.attachEvents();
   
       // hide everything out of selector's boundaries
-      this.selector.style.overflow = 'hidden';
+      //this.selector.style.overflow = 'hidden';
   
       // rtl or ltr
       this.selector.style.direction = this.config.rtl ? 'rtl' : 'ltr';

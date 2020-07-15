@@ -12,19 +12,15 @@
 </head>
 
 <body>
-  <div class="vertical-section-container centered">
+  <div>
 
-    <script type="module" src="../xtal-siema.js"></script>
-    <script type="module" src="https://unpkg.com/wired-button@2.1.0/lib/wired-button.js?module"></script>
-    <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.41/xtal-link-preview.js?module"></script>
-    <script type="module" src="https://unpkg.com/p-et-alia@0.0.105/p-d.js?module"></script>
     <h3>Basic xtal-siema demo</h3>
     <div>
       <wired-button data-jump="-1">Previous Page</wired-button>&nbsp;
       <wired-button data-jump="1">Next Page</wired-button>
     </div>
     <p-d on="click" if="wired-button" to=[-page-jump] val=target.dataset.jump></p-d>
-    <xtal-siema style="height: 300px" -page-jump attr-for-selected="preview">
+    <xtal-siema  -page-jump attr-for-selected="preview">
       <div class="openingSlide">
         <div class="textDesc">
           Web Component links of interest
@@ -195,21 +191,22 @@
         <div class="textDesc">CSS Doodle</div>
       </xtal-link-preview>
     </xtal-siema>
+    
     <p-d on=view-model-changed to=[-href] val=target.href></p-d>
     <p-d on=view-model-changed to=[-innerText] val=target.title></p-d>
     <a -href -innerText target="_blank">link</a>
 
     <style>
-      xtal-link-preview,
+      /* xtal-link-preview,
       .openingSlide {
-        height: 200px;
+        height: 800px;
         text-align: center;
-      }
+      } */
 
-      xtal-link-preview {
+      /* xtal-link-preview {
         position: relative;
         top: 80px
-      }
+      } */
 
       .textDesc {
         position: relative;
@@ -245,6 +242,11 @@
           display: none;
         } */
     </style>
+
+    <script type="module" src="../xtal-siema.js"></script>
+    <script type="module" src="https://unpkg.com/wired-button@2.1.0/lib/wired-button.js?module"></script>
+    <script type="module" src="https://unpkg.com/xtal-link-preview@0.0.41/xtal-link-preview.js?module"></script>
+    <script type="module" src="https://unpkg.com/p-et-alia@0.0.105/p-d.js?module"></script>
   </div>
 </body>
 
